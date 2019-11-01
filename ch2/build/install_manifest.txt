@@ -1,0 +1,3 @@
+/usr/bin/helloSLAM
+/usr/lib/libhelloSLAM.so
+/usr/include/helloSLAM/helloSLAMLIB.h

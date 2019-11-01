@@ -1,0 +1,10 @@
+add_executable(eigen eigen_test.cpp)
+
+find_package(Eigen3 REQUIRED)
+if(EIGEN3_FOUND)
+  message(STATUS "Eigen3 Found: ${EIGEN3_INCLUDE_DIR}")
+  include_directories(${EIGEN3_INCLUDE_DIR})
+  target_link_libraries(eigen ${EIGEN3_LIBRARY})
+else(EIGEN3_FOUND)
+  message(FATAL_ERROR "Could not find Eigen3!")
+endif(EIGEN3_FOUND)

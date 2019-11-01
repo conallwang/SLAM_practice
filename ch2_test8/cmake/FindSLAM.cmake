@@ -1,0 +1,16 @@
+find_path(SLAM_INCLUDE_DIR helloSLAMLIB.h /usr/include/helloSLAM)
+find_library(SLAM_LIBRARY libhelloSLAM.so /usr/lib /usr/local/lib)
+
+if(SLAM_INCLUDE_DIR AND SLAM_LIBRARY)
+  set(SLAM_FOUND TRUE)
+endif(SLAM_INCLUDE_DIR AND SLAM_LIBRARY)
+
+if(SLAM_FOUND)
+  if(NOT SLAM_FIND_QUIETLY)
+    message(STATUS "SLAM Found: ${SLAM_LIBRARY}")
+  endif(NOT SLAM_FIND_QUIETLY)
+else(SLAM_FOUND)
+  if(SLAM_FIND_REQUIRED)
+    message(FATAL_ERROR "Could not find SLAM!")
+  endif(SLAM_FIND_REQUIRED)
+endif(SLAM_FOUND)

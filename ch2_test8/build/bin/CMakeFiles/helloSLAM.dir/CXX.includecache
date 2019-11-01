@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/johnson/SLAM/ch2_test8/src/main.cpp
+iostream
+-
+helloSLAMLIB.h
+-
+
+/usr/include/helloSLAM/helloSLAMLIB.h
+

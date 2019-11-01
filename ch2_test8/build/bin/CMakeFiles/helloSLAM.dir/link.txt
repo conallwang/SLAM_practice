@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/helloSLAM.dir/main.cpp.o  -o helloSLAM /usr/local/lib/libhelloSLAM.so -Wl,-rpath,/usr/local/lib 
