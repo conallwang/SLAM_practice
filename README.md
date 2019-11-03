@@ -1,2 +1,5 @@
 # SLAM_practice
-* A practice with SLAM learning
+
+这是一个git仓库，用来记录我的SLAM学习过程，大致跟随高翔博士的《视觉SLAM十四讲》进行学习，以此做一个记录。
+
+**其中chx表示对应第x个章节，其中有的目录组织和书中不同，而且可能有一些自己的思考和发挥。**
