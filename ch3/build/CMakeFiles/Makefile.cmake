@@ -7,6 +7,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/johnson/Pangolin/build/src/PangolinConfig.cmake"
+  "/home/johnson/Pangolin/build/src/PangolinConfigVersion.cmake"
+  "/home/johnson/Pangolin/build/src/PangolinTargets.cmake"
   "../CMakeLists.txt"
   "../Eigen/CMakeLists.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
@@ -21,6 +24,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.5/Modules/CMakeCXXCompiler.cmake.in"
   "/usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"
   "/usr/share/cmake-3.5/Modules/CMakeCXXInformation.cmake"
+  "/usr/share/cmake-3.5/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCommonLanguageInclude.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCompilerIdDetection.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeDetermineCCompiler.cmake"
@@ -42,6 +46,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.5/Modules/CMakeTestCXXCompiler.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeTestCompilerCommon.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeUnixFindMake.cmake"
+  "/usr/share/cmake-3.5/Modules/CheckCXXCompilerFlag.cmake"
+  "/usr/share/cmake-3.5/Modules/CheckCXXSourceCompiles.cmake"
   "/usr/share/cmake-3.5/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/usr/share/cmake-3.5/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/usr/share/cmake-3.5/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
@@ -114,5 +120,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "bin/CMakeFiles/eigen.dir/DependInfo.cmake"
+  "bin/CMakeFiles/eigen_pangolin.dir/DependInfo.cmake"
+  "bin/CMakeFiles/eigen_matrix.dir/DependInfo.cmake"
+  "bin/CMakeFiles/eigen_practice_correct.dir/DependInfo.cmake"
+  "bin/CMakeFiles/eigen_geometry.dir/DependInfo.cmake"
+  "bin/CMakeFiles/eigen_practice.dir/DependInfo.cmake"
   )

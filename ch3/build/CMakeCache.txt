@@ -174,6 +174,9 @@ PRECTICE_CH3_BINARY_DIR:STATIC=/home/johnson/SLAM/ch3/build
 //Value Computed by CMake
 PRECTICE_CH3_SOURCE_DIR:STATIC=/home/johnson/SLAM/ch3
 
+//The directory containing a CMake configuration file for Pangolin.
+Pangolin_DIR:PATH=/home/johnson/Pangolin/build/src
+
 
 ########################
 # INTERNAL cache entries
@@ -304,4 +307,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Test COMPILER_SUPPORTS_CXX0X
+COMPILER_SUPPORTS_CXX0X:INTERNAL=1
+//Test COMPILER_SUPPORTS_CXX11
+COMPILER_SUPPORTS_CXX11:INTERNAL=1
 

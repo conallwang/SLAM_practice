@@ -111,46 +111,214 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bin/CMakeFiles/eigen.dir/rule:
-	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen.dir/rule
-.PHONY : bin/CMakeFiles/eigen.dir/rule
+bin/CMakeFiles/eigen_pangolin.dir/rule:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen_pangolin.dir/rule
+.PHONY : bin/CMakeFiles/eigen_pangolin.dir/rule
 
 # Convenience name for target.
-eigen: bin/CMakeFiles/eigen.dir/rule
+eigen_pangolin: bin/CMakeFiles/eigen_pangolin.dir/rule
 
-.PHONY : eigen
+.PHONY : eigen_pangolin
 
 # fast build rule for target.
-eigen/fast:
-	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen.dir/build.make bin/CMakeFiles/eigen.dir/build
-.PHONY : eigen/fast
+eigen_pangolin/fast:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/build
+.PHONY : eigen_pangolin/fast
 
-eigen_test.o: eigen_test.cpp.o
+# Convenience name for target.
+bin/CMakeFiles/eigen_matrix.dir/rule:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen_matrix.dir/rule
+.PHONY : bin/CMakeFiles/eigen_matrix.dir/rule
 
-.PHONY : eigen_test.o
+# Convenience name for target.
+eigen_matrix: bin/CMakeFiles/eigen_matrix.dir/rule
+
+.PHONY : eigen_matrix
+
+# fast build rule for target.
+eigen_matrix/fast:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/build
+.PHONY : eigen_matrix/fast
+
+# Convenience name for target.
+bin/CMakeFiles/eigen_practice_correct.dir/rule:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen_practice_correct.dir/rule
+.PHONY : bin/CMakeFiles/eigen_practice_correct.dir/rule
+
+# Convenience name for target.
+eigen_practice_correct: bin/CMakeFiles/eigen_practice_correct.dir/rule
+
+.PHONY : eigen_practice_correct
+
+# fast build rule for target.
+eigen_practice_correct/fast:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/build
+.PHONY : eigen_practice_correct/fast
+
+# Convenience name for target.
+bin/CMakeFiles/eigen_geometry.dir/rule:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen_geometry.dir/rule
+.PHONY : bin/CMakeFiles/eigen_geometry.dir/rule
+
+# Convenience name for target.
+eigen_geometry: bin/CMakeFiles/eigen_geometry.dir/rule
+
+.PHONY : eigen_geometry
+
+# fast build rule for target.
+eigen_geometry/fast:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/build
+.PHONY : eigen_geometry/fast
+
+# Convenience name for target.
+bin/CMakeFiles/eigen_practice.dir/rule:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/eigen_practice.dir/rule
+.PHONY : bin/CMakeFiles/eigen_practice.dir/rule
+
+# Convenience name for target.
+eigen_practice: bin/CMakeFiles/eigen_practice.dir/rule
+
+.PHONY : eigen_practice
+
+# fast build rule for target.
+eigen_practice/fast:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/build
+.PHONY : eigen_practice/fast
+
+eigen_geometry.o: eigen_geometry.cpp.o
+
+.PHONY : eigen_geometry.o
 
 # target to build an object file
-eigen_test.cpp.o:
-	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen.dir/build.make bin/CMakeFiles/eigen.dir/eigen_test.cpp.o
-.PHONY : eigen_test.cpp.o
+eigen_geometry.cpp.o:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/eigen_geometry.cpp.o
+.PHONY : eigen_geometry.cpp.o
 
-eigen_test.i: eigen_test.cpp.i
+eigen_geometry.i: eigen_geometry.cpp.i
 
-.PHONY : eigen_test.i
+.PHONY : eigen_geometry.i
 
 # target to preprocess a source file
-eigen_test.cpp.i:
-	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen.dir/build.make bin/CMakeFiles/eigen.dir/eigen_test.cpp.i
-.PHONY : eigen_test.cpp.i
+eigen_geometry.cpp.i:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/eigen_geometry.cpp.i
+.PHONY : eigen_geometry.cpp.i
 
-eigen_test.s: eigen_test.cpp.s
+eigen_geometry.s: eigen_geometry.cpp.s
 
-.PHONY : eigen_test.s
+.PHONY : eigen_geometry.s
 
 # target to generate assembly for a file
-eigen_test.cpp.s:
-	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen.dir/build.make bin/CMakeFiles/eigen.dir/eigen_test.cpp.s
-.PHONY : eigen_test.cpp.s
+eigen_geometry.cpp.s:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/eigen_geometry.cpp.s
+.PHONY : eigen_geometry.cpp.s
+
+eigen_matrix.o: eigen_matrix.cpp.o
+
+.PHONY : eigen_matrix.o
+
+# target to build an object file
+eigen_matrix.cpp.o:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/eigen_matrix.cpp.o
+.PHONY : eigen_matrix.cpp.o
+
+eigen_matrix.i: eigen_matrix.cpp.i
+
+.PHONY : eigen_matrix.i
+
+# target to preprocess a source file
+eigen_matrix.cpp.i:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/eigen_matrix.cpp.i
+.PHONY : eigen_matrix.cpp.i
+
+eigen_matrix.s: eigen_matrix.cpp.s
+
+.PHONY : eigen_matrix.s
+
+# target to generate assembly for a file
+eigen_matrix.cpp.s:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/eigen_matrix.cpp.s
+.PHONY : eigen_matrix.cpp.s
+
+eigen_pangolin.o: eigen_pangolin.cpp.o
+
+.PHONY : eigen_pangolin.o
+
+# target to build an object file
+eigen_pangolin.cpp.o:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/eigen_pangolin.cpp.o
+.PHONY : eigen_pangolin.cpp.o
+
+eigen_pangolin.i: eigen_pangolin.cpp.i
+
+.PHONY : eigen_pangolin.i
+
+# target to preprocess a source file
+eigen_pangolin.cpp.i:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/eigen_pangolin.cpp.i
+.PHONY : eigen_pangolin.cpp.i
+
+eigen_pangolin.s: eigen_pangolin.cpp.s
+
+.PHONY : eigen_pangolin.s
+
+# target to generate assembly for a file
+eigen_pangolin.cpp.s:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/eigen_pangolin.cpp.s
+.PHONY : eigen_pangolin.cpp.s
+
+eigen_practice.o: eigen_practice.cpp.o
+
+.PHONY : eigen_practice.o
+
+# target to build an object file
+eigen_practice.cpp.o:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/eigen_practice.cpp.o
+.PHONY : eigen_practice.cpp.o
+
+eigen_practice.i: eigen_practice.cpp.i
+
+.PHONY : eigen_practice.i
+
+# target to preprocess a source file
+eigen_practice.cpp.i:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/eigen_practice.cpp.i
+.PHONY : eigen_practice.cpp.i
+
+eigen_practice.s: eigen_practice.cpp.s
+
+.PHONY : eigen_practice.s
+
+# target to generate assembly for a file
+eigen_practice.cpp.s:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/eigen_practice.cpp.s
+.PHONY : eigen_practice.cpp.s
+
+eigen_practice_correct.o: eigen_practice_correct.cpp.o
+
+.PHONY : eigen_practice_correct.o
+
+# target to build an object file
+eigen_practice_correct.cpp.o:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/eigen_practice_correct.cpp.o
+.PHONY : eigen_practice_correct.cpp.o
+
+eigen_practice_correct.i: eigen_practice_correct.cpp.i
+
+.PHONY : eigen_practice_correct.i
+
+# target to preprocess a source file
+eigen_practice_correct.cpp.i:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/eigen_practice_correct.cpp.i
+.PHONY : eigen_practice_correct.cpp.i
+
+eigen_practice_correct.s: eigen_practice_correct.cpp.s
+
+.PHONY : eigen_practice_correct.s
+
+# target to generate assembly for a file
+eigen_practice_correct.cpp.s:
+	cd /home/johnson/SLAM/ch3/build && $(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/eigen_practice_correct.cpp.s
+.PHONY : eigen_practice_correct.cpp.s
 
 # Help Target
 help:
@@ -159,11 +327,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... eigen_pangolin"
+	@echo "... eigen_matrix"
+	@echo "... eigen_practice_correct"
+	@echo "... eigen_geometry"
 	@echo "... rebuild_cache"
-	@echo "... eigen"
-	@echo "... eigen_test.o"
-	@echo "... eigen_test.i"
-	@echo "... eigen_test.s"
+	@echo "... eigen_practice"
+	@echo "... eigen_geometry.o"
+	@echo "... eigen_geometry.i"
+	@echo "... eigen_geometry.s"
+	@echo "... eigen_matrix.o"
+	@echo "... eigen_matrix.i"
+	@echo "... eigen_matrix.s"
+	@echo "... eigen_pangolin.o"
+	@echo "... eigen_pangolin.i"
+	@echo "... eigen_pangolin.s"
+	@echo "... eigen_practice.o"
+	@echo "... eigen_practice.i"
+	@echo "... eigen_practice.s"
+	@echo "... eigen_practice_correct.o"
+	@echo "... eigen_practice_correct.i"
+	@echo "... eigen_practice_correct.s"
 .PHONY : help
 
 

@@ -111,17 +111,69 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named eigen
+# Target rules for targets named eigen_pangolin
 
 # Build rule for target.
-eigen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen
-.PHONY : eigen
+eigen_pangolin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigen_pangolin
+.PHONY : eigen_pangolin
 
 # fast build rule for target.
-eigen/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen.dir/build.make bin/CMakeFiles/eigen.dir/build
-.PHONY : eigen/fast
+eigen_pangolin/fast:
+	$(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/build
+.PHONY : eigen_pangolin/fast
+
+#=============================================================================
+# Target rules for targets named eigen_matrix
+
+# Build rule for target.
+eigen_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigen_matrix
+.PHONY : eigen_matrix
+
+# fast build rule for target.
+eigen_matrix/fast:
+	$(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/build
+.PHONY : eigen_matrix/fast
+
+#=============================================================================
+# Target rules for targets named eigen_practice_correct
+
+# Build rule for target.
+eigen_practice_correct: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigen_practice_correct
+.PHONY : eigen_practice_correct
+
+# fast build rule for target.
+eigen_practice_correct/fast:
+	$(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/build
+.PHONY : eigen_practice_correct/fast
+
+#=============================================================================
+# Target rules for targets named eigen_geometry
+
+# Build rule for target.
+eigen_geometry: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigen_geometry
+.PHONY : eigen_geometry
+
+# fast build rule for target.
+eigen_geometry/fast:
+	$(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/build
+.PHONY : eigen_geometry/fast
+
+#=============================================================================
+# Target rules for targets named eigen_practice
+
+# Build rule for target.
+eigen_practice: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eigen_practice
+.PHONY : eigen_practice
+
+# fast build rule for target.
+eigen_practice/fast:
+	$(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/build
+.PHONY : eigen_practice/fast
 
 # Help Target
 help:
@@ -131,7 +183,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... eigen"
+	@echo "... eigen_pangolin"
+	@echo "... eigen_matrix"
+	@echo "... eigen_practice_correct"
+	@echo "... eigen_geometry"
+	@echo "... eigen_practice"
 .PHONY : help
 
 

@@ -1,5 +1,9 @@
 /home/johnson/SLAM/ch3/build/CMakeFiles/edit_cache.dir
 /home/johnson/SLAM/ch3/build/CMakeFiles/rebuild_cache.dir
 /home/johnson/SLAM/ch3/build/bin/CMakeFiles/edit_cache.dir
+/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_pangolin.dir
+/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_matrix.dir
+/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_practice_correct.dir
+/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_geometry.dir
 /home/johnson/SLAM/ch3/build/bin/CMakeFiles/rebuild_cache.dir
-/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen.dir
+/home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_practice.dir
