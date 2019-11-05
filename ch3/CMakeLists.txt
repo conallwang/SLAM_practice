@@ -4,3 +4,4 @@ project(PRECTICE_CH3)
 # set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 add_subdirectory(Eigen bin)
+add_subdirectory(practice)

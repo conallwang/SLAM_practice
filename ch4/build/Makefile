@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnson/SLAM/ch3
+CMAKE_SOURCE_DIR = /home/johnson/SLAM/ch4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnson/SLAM/ch3/build
+CMAKE_BINARY_DIR = /home/johnson/SLAM/ch4/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch3/build/CMakeFiles /home/johnson/SLAM/ch3/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch4/build/CMakeFiles /home/johnson/SLAM/ch4/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch4/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,82 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named eigen_pangolin
+# Target rules for targets named trajectoryError
 
 # Build rule for target.
-eigen_pangolin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen_pangolin
-.PHONY : eigen_pangolin
+trajectoryError: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectoryError
+.PHONY : trajectoryError
 
 # fast build rule for target.
-eigen_pangolin/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen_pangolin.dir/build.make bin/CMakeFiles/eigen_pangolin.dir/build
-.PHONY : eigen_pangolin/fast
+trajectoryError/fast:
+	$(MAKE) -f src/CMakeFiles/trajectoryError.dir/build.make src/CMakeFiles/trajectoryError.dir/build
+.PHONY : trajectoryError/fast
 
 #=============================================================================
-# Target rules for targets named eigen_matrix
+# Target rules for targets named sophus
 
 # Build rule for target.
-eigen_matrix: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen_matrix
-.PHONY : eigen_matrix
+sophus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sophus
+.PHONY : sophus
 
 # fast build rule for target.
-eigen_matrix/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen_matrix.dir/build.make bin/CMakeFiles/eigen_matrix.dir/build
-.PHONY : eigen_matrix/fast
-
-#=============================================================================
-# Target rules for targets named eigen_practice_correct
-
-# Build rule for target.
-eigen_practice_correct: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen_practice_correct
-.PHONY : eigen_practice_correct
-
-# fast build rule for target.
-eigen_practice_correct/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen_practice_correct.dir/build.make bin/CMakeFiles/eigen_practice_correct.dir/build
-.PHONY : eigen_practice_correct/fast
-
-#=============================================================================
-# Target rules for targets named eigen_geometry
-
-# Build rule for target.
-eigen_geometry: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen_geometry
-.PHONY : eigen_geometry
-
-# fast build rule for target.
-eigen_geometry/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen_geometry.dir/build.make bin/CMakeFiles/eigen_geometry.dir/build
-.PHONY : eigen_geometry/fast
-
-#=============================================================================
-# Target rules for targets named eigen_practice
-
-# Build rule for target.
-eigen_practice: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 eigen_practice
-.PHONY : eigen_practice
-
-# fast build rule for target.
-eigen_practice/fast:
-	$(MAKE) -f bin/CMakeFiles/eigen_practice.dir/build.make bin/CMakeFiles/eigen_practice.dir/build
-.PHONY : eigen_practice/fast
-
-#=============================================================================
-# Target rules for targets named problem4
-
-# Build rule for target.
-problem4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 problem4
-.PHONY : problem4
-
-# fast build rule for target.
-problem4/fast:
-	$(MAKE) -f practice/CMakeFiles/problem4.dir/build.make practice/CMakeFiles/problem4.dir/build
-.PHONY : problem4/fast
+sophus/fast:
+	$(MAKE) -f src/CMakeFiles/sophus.dir/build.make src/CMakeFiles/sophus.dir/build
+.PHONY : sophus/fast
 
 # Help Target
 help:
@@ -196,12 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... eigen_pangolin"
-	@echo "... eigen_matrix"
-	@echo "... eigen_practice_correct"
-	@echo "... eigen_geometry"
-	@echo "... eigen_practice"
-	@echo "... problem4"
+	@echo "... trajectoryError"
+	@echo "... sophus"
 .PHONY : help
 
 

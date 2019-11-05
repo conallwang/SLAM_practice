@@ -11,11 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/johnson/Pangolin/build/src/PangolinConfigVersion.cmake"
   "/home/johnson/Pangolin/build/src/PangolinTargets.cmake"
   "../CMakeLists.txt"
-  "../Eigen/CMakeLists.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
-  "../practice/CMakeLists.txt"
+  "../src/CMakeLists.txt"
   "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCXXInformation.cmake"
@@ -46,16 +45,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "bin/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "practice/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "bin/CMakeFiles/eigen_pangolin.dir/DependInfo.cmake"
-  "bin/CMakeFiles/eigen_matrix.dir/DependInfo.cmake"
-  "bin/CMakeFiles/eigen_practice_correct.dir/DependInfo.cmake"
-  "bin/CMakeFiles/eigen_geometry.dir/DependInfo.cmake"
-  "bin/CMakeFiles/eigen_practice.dir/DependInfo.cmake"
-  "practice/CMakeFiles/problem4.dir/DependInfo.cmake"
+  "src/CMakeFiles/trajectoryError.dir/DependInfo.cmake"
+  "src/CMakeFiles/sophus.dir/DependInfo.cmake"
   )

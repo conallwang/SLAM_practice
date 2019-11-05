@@ -271,6 +271,61 @@ clean: bin/CMakeFiles/eigen_practice.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory practice
+
+# Convenience name for "all" pass in the directory.
+practice/all: practice/CMakeFiles/problem4.dir/all
+
+.PHONY : practice/all
+
+# Convenience name for "clean" pass in the directory.
+practice/clean: practice/CMakeFiles/problem4.dir/clean
+
+.PHONY : practice/clean
+
+# Convenience name for "preinstall" pass in the directory.
+practice/preinstall:
+
+.PHONY : practice/preinstall
+
+#=============================================================================
+# Target rules for target practice/CMakeFiles/problem4.dir
+
+# All Build rule for target.
+practice/CMakeFiles/problem4.dir/all:
+	$(MAKE) -f practice/CMakeFiles/problem4.dir/build.make practice/CMakeFiles/problem4.dir/depend
+	$(MAKE) -f practice/CMakeFiles/problem4.dir/build.make practice/CMakeFiles/problem4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch3/build/CMakeFiles --progress-num=11,12 "Built target problem4"
+.PHONY : practice/CMakeFiles/problem4.dir/all
+
+# Include target in all.
+all: practice/CMakeFiles/problem4.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+practice/CMakeFiles/problem4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch3/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 practice/CMakeFiles/problem4.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch3/build/CMakeFiles 0
+.PHONY : practice/CMakeFiles/problem4.dir/rule
+
+# Convenience name for target.
+problem4: practice/CMakeFiles/problem4.dir/rule
+
+.PHONY : problem4
+
+# clean rule for target.
+practice/CMakeFiles/problem4.dir/clean:
+	$(MAKE) -f practice/CMakeFiles/problem4.dir/build.make practice/CMakeFiles/problem4.dir/clean
+.PHONY : practice/CMakeFiles/problem4.dir/clean
+
+# clean rule for target.
+clean: practice/CMakeFiles/problem4.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

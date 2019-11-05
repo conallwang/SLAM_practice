@@ -7,3 +7,6 @@
 /home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_geometry.dir
 /home/johnson/SLAM/ch3/build/bin/CMakeFiles/rebuild_cache.dir
 /home/johnson/SLAM/ch3/build/bin/CMakeFiles/eigen_practice.dir
+/home/johnson/SLAM/ch3/build/practice/CMakeFiles/rebuild_cache.dir
+/home/johnson/SLAM/ch3/build/practice/CMakeFiles/edit_cache.dir
+/home/johnson/SLAM/ch3/build/practice/CMakeFiles/problem4.dir
