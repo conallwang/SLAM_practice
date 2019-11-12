@@ -21,8 +21,18 @@ find_package(OpenCV REQUIRED)
 message(STATUS "OpenCV FOUND: ${OPENCV_INCLUDE_DIR}")
 message(STATUS "OpenCV libs: ${OpenCV_LIBS}")
 
+find_package(Eigen3 REQUIRED)
+message(STATUS "Eigen3 FOUND: ${EIGEN3_INCLUDE_DIRS}")
+message(STATUS "Eigen3 libs: ${EIGEN3_LIBRARIES}")
+
+find_package(Pangolin REQUIRED)
+message(STATUS "Pangolin FOUND: ${Pangolin_INCLUDE_DIRS}") 
+message(STATUS "Pangolin libs: ${Pangolin_LIBRARIES}")
+
 include_directories(
 #  ${OPENCV_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
+  ${Pangolin_INCLUDE_DIRS}
 )
 
 add_executable(opencv_base opencv_base.cpp)
@@ -38,4 +48,18 @@ target_link_libraries(opencv_undistorted
 add_executable(opencv_undistorted_correct opencv_undistort_correct.cpp)
 target_link_libraries(opencv_undistorted_correct
   ${OpenCV_LIBS}
+)
+
+add_executable(opencv_ste opencv_stereo.cpp)
+target_link_libraries(opencv_ste
+  ${EIGEN3_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${Pangolin_LIBRARIES}
+)
+
+add_executable(opencv_jointMap opencv_jointMap.cpp)
+target_link_libraries(opencv_jointMap
+  ${EIGEN3_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${Pangolin_LIBRARIES}
 )

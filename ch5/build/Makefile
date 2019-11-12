@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named opencv_jointMap
+
+# Build rule for target.
+opencv_jointMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_jointMap
+.PHONY : opencv_jointMap
+
+# fast build rule for target.
+opencv_jointMap/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/build
+.PHONY : opencv_jointMap/fast
+
+#=============================================================================
+# Target rules for targets named opencv_base
+
+# Build rule for target.
+opencv_base: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_base
+.PHONY : opencv_base
+
+# fast build rule for target.
+opencv_base/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_base.dir/build.make bin/CMakeFiles/opencv_base.dir/build
+.PHONY : opencv_base/fast
+
+#=============================================================================
+# Target rules for targets named opencv_ste
+
+# Build rule for target.
+opencv_ste: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_ste
+.PHONY : opencv_ste
+
+# fast build rule for target.
+opencv_ste/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_ste.dir/build.make bin/CMakeFiles/opencv_ste.dir/build
+.PHONY : opencv_ste/fast
+
+#=============================================================================
 # Target rules for targets named opencv_undistorted
 
 # Build rule for target.
@@ -136,19 +175,6 @@ opencv_undistorted_correct/fast:
 	$(MAKE) -f bin/CMakeFiles/opencv_undistorted_correct.dir/build.make bin/CMakeFiles/opencv_undistorted_correct.dir/build
 .PHONY : opencv_undistorted_correct/fast
 
-#=============================================================================
-# Target rules for targets named opencv_base
-
-# Build rule for target.
-opencv_base: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencv_base
-.PHONY : opencv_base
-
-# fast build rule for target.
-opencv_base/fast:
-	$(MAKE) -f bin/CMakeFiles/opencv_base.dir/build.make bin/CMakeFiles/opencv_base.dir/build
-.PHONY : opencv_base/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,9 +183,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... opencv_jointMap"
+	@echo "... opencv_base"
+	@echo "... opencv_ste"
 	@echo "... opencv_undistorted"
 	@echo "... opencv_undistorted_correct"
-	@echo "... opencv_base"
 .PHONY : help
 
 

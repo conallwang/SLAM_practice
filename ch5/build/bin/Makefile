@@ -111,6 +111,51 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+bin/CMakeFiles/opencv_jointMap.dir/rule:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_jointMap.dir/rule
+.PHONY : bin/CMakeFiles/opencv_jointMap.dir/rule
+
+# Convenience name for target.
+opencv_jointMap: bin/CMakeFiles/opencv_jointMap.dir/rule
+
+.PHONY : opencv_jointMap
+
+# fast build rule for target.
+opencv_jointMap/fast:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/build
+.PHONY : opencv_jointMap/fast
+
+# Convenience name for target.
+bin/CMakeFiles/opencv_base.dir/rule:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_base.dir/rule
+.PHONY : bin/CMakeFiles/opencv_base.dir/rule
+
+# Convenience name for target.
+opencv_base: bin/CMakeFiles/opencv_base.dir/rule
+
+.PHONY : opencv_base
+
+# fast build rule for target.
+opencv_base/fast:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_base.dir/build.make bin/CMakeFiles/opencv_base.dir/build
+.PHONY : opencv_base/fast
+
+# Convenience name for target.
+bin/CMakeFiles/opencv_ste.dir/rule:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_ste.dir/rule
+.PHONY : bin/CMakeFiles/opencv_ste.dir/rule
+
+# Convenience name for target.
+opencv_ste: bin/CMakeFiles/opencv_ste.dir/rule
+
+.PHONY : opencv_ste
+
+# fast build rule for target.
+opencv_ste/fast:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_ste.dir/build.make bin/CMakeFiles/opencv_ste.dir/build
+.PHONY : opencv_ste/fast
+
+# Convenience name for target.
 bin/CMakeFiles/opencv_undistorted.dir/rule:
 	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_undistorted.dir/rule
 .PHONY : bin/CMakeFiles/opencv_undistorted.dir/rule
@@ -140,21 +185,6 @@ opencv_undistorted_correct/fast:
 	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_undistorted_correct.dir/build.make bin/CMakeFiles/opencv_undistorted_correct.dir/build
 .PHONY : opencv_undistorted_correct/fast
 
-# Convenience name for target.
-bin/CMakeFiles/opencv_base.dir/rule:
-	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_base.dir/rule
-.PHONY : bin/CMakeFiles/opencv_base.dir/rule
-
-# Convenience name for target.
-opencv_base: bin/CMakeFiles/opencv_base.dir/rule
-
-.PHONY : opencv_base
-
-# fast build rule for target.
-opencv_base/fast:
-	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_base.dir/build.make bin/CMakeFiles/opencv_base.dir/build
-.PHONY : opencv_base/fast
-
 opencv_base.o: opencv_base.cpp.o
 
 .PHONY : opencv_base.o
@@ -181,6 +211,60 @@ opencv_base.s: opencv_base.cpp.s
 opencv_base.cpp.s:
 	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_base.dir/build.make bin/CMakeFiles/opencv_base.dir/opencv_base.cpp.s
 .PHONY : opencv_base.cpp.s
+
+opencv_jointMap.o: opencv_jointMap.cpp.o
+
+.PHONY : opencv_jointMap.o
+
+# target to build an object file
+opencv_jointMap.cpp.o:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/opencv_jointMap.cpp.o
+.PHONY : opencv_jointMap.cpp.o
+
+opencv_jointMap.i: opencv_jointMap.cpp.i
+
+.PHONY : opencv_jointMap.i
+
+# target to preprocess a source file
+opencv_jointMap.cpp.i:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/opencv_jointMap.cpp.i
+.PHONY : opencv_jointMap.cpp.i
+
+opencv_jointMap.s: opencv_jointMap.cpp.s
+
+.PHONY : opencv_jointMap.s
+
+# target to generate assembly for a file
+opencv_jointMap.cpp.s:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/opencv_jointMap.cpp.s
+.PHONY : opencv_jointMap.cpp.s
+
+opencv_stereo.o: opencv_stereo.cpp.o
+
+.PHONY : opencv_stereo.o
+
+# target to build an object file
+opencv_stereo.cpp.o:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_ste.dir/build.make bin/CMakeFiles/opencv_ste.dir/opencv_stereo.cpp.o
+.PHONY : opencv_stereo.cpp.o
+
+opencv_stereo.i: opencv_stereo.cpp.i
+
+.PHONY : opencv_stereo.i
+
+# target to preprocess a source file
+opencv_stereo.cpp.i:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_ste.dir/build.make bin/CMakeFiles/opencv_ste.dir/opencv_stereo.cpp.i
+.PHONY : opencv_stereo.cpp.i
+
+opencv_stereo.s: opencv_stereo.cpp.s
+
+.PHONY : opencv_stereo.s
+
+# target to generate assembly for a file
+opencv_stereo.cpp.s:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_ste.dir/build.make bin/CMakeFiles/opencv_ste.dir/opencv_stereo.cpp.s
+.PHONY : opencv_stereo.cpp.s
 
 opencv_undistort.o: opencv_undistort.cpp.o
 
@@ -243,13 +327,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... opencv_jointMap"
+	@echo "... rebuild_cache"
+	@echo "... opencv_base"
+	@echo "... opencv_ste"
 	@echo "... opencv_undistorted"
 	@echo "... opencv_undistorted_correct"
-	@echo "... opencv_base"
-	@echo "... rebuild_cache"
 	@echo "... opencv_base.o"
 	@echo "... opencv_base.i"
 	@echo "... opencv_base.s"
+	@echo "... opencv_jointMap.o"
+	@echo "... opencv_jointMap.i"
+	@echo "... opencv_jointMap.s"
+	@echo "... opencv_stereo.o"
+	@echo "... opencv_stereo.i"
+	@echo "... opencv_stereo.s"
 	@echo "... opencv_undistort.o"
 	@echo "... opencv_undistort.i"
 	@echo "... opencv_undistort.s"

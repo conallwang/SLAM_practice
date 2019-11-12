@@ -7,6 +7,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/johnson/Pangolin/build/src/PangolinConfig.cmake"
+  "/home/johnson/Pangolin/build/src/PangolinConfigVersion.cmake"
+  "/home/johnson/Pangolin/build/src/PangolinTargets.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
@@ -16,6 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVConfig.cmake"
   "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules-release.cmake"
   "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules.cmake"
+  "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -53,7 +57,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "bin/CMakeFiles/opencv_jointMap.dir/DependInfo.cmake"
+  "bin/CMakeFiles/opencv_base.dir/DependInfo.cmake"
+  "bin/CMakeFiles/opencv_ste.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_undistorted.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_undistorted_correct.dir/DependInfo.cmake"
-  "bin/CMakeFiles/opencv_base.dir/DependInfo.cmake"
   )
