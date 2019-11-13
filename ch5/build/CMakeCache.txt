@@ -180,6 +180,9 @@ OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.3.1-dev
 //The directory containing a CMake configuration file for Pangolin.
 Pangolin_DIR:PATH=/home/johnson/Pangolin/build/src
 
+//The directory containing a CMake configuration file for Sophus.
+Sophus_DIR:PATH=/usr/local/share/sophus/cmake
+
 
 ########################
 # INTERNAL cache entries

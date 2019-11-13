@@ -29,10 +29,15 @@ find_package(Pangolin REQUIRED)
 message(STATUS "Pangolin FOUND: ${Pangolin_INCLUDE_DIRS}") 
 message(STATUS "Pangolin libs: ${Pangolin_LIBRARIES}")
 
+find_package(Sophus REQUIRED)
+message(STATUS "Sophus FOUND: ${Sophus_INCLUDE_DIRS}")
+message(STATUS "Sophus libs: ${Sophus_LIBRARIES}")
+
 include_directories(
 #  ${OPENCV_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
   ${Pangolin_INCLUDE_DIRS}
+  ${Sophus_INCLUDE_DIRS}
 )
 
 add_executable(opencv_base opencv_base.cpp)
@@ -62,4 +67,12 @@ target_link_libraries(opencv_jointMap
   ${EIGEN3_LIBRARIES}
   ${OpenCV_LIBS}
   ${Pangolin_LIBRARIES}
+)
+
+add_executable(opencv_makePointCloud opencv_makePointCloud.cpp)
+target_link_libraries(opencv_makePointCloud
+  ${EIGEN3_LIBRARIES}
+  ${OpenCV_LIBS}
+  ${Pangolin_LIBRARIES}
+  ${Sophus_LIBRARIES}
 )

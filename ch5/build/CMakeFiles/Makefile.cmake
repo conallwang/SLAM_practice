@@ -20,10 +20,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules-release.cmake"
   "/opt/ros/kinetic/share/OpenCV-3.3.1-dev/OpenCVModules.cmake"
   "/usr/lib/cmake/eigen3/Eigen3Config.cmake"
+  "/usr/local/share/sophus/cmake/SophusConfig.cmake"
+  "/usr/local/share/sophus/cmake/SophusConfigVersion.cmake"
+  "/usr/local/share/sophus/cmake/SophusTargets.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake-3.5/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeParseArguments.cmake"
@@ -57,6 +61,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "bin/CMakeFiles/opencv_makePointCloud.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_jointMap.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_base.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_ste.dir/DependInfo.cmake"

@@ -1,29 +1,30 @@
 #include <iostream>
-#include <sstream>
+#include <fstream>
+#include <unistd.h>
 using namespace std;
 
 #include <opencv2/opencv.hpp>
 
-#include <eigen3/Eigen/Core>
-#include <eigen3/Eigen/Geometry>
+#include <Eigen/Core>
+#include <Eigen/Geometry>
 
 #include <pangolin/pangolin.h>
+
+#include <boost/format.hpp>
+
+#include "sophus/se3.hpp"
 using namespace Eigen;
+
+typedef Eigen::Matrix<double, 6, 1> Vector6d;
+
+string base_path = "/home/johnson/SLAM/ch5/";
 
 // camera calib
 double cx = 325.5, cy = 253.5, fx = 518.0, fy = 519.0;
+double depth_scale = 1000.0;
 
-// number to string
-string num2str(int num) {
-    string res;
-    stringstream ss;
-    ss << num;
-    ss >> res;
-    return res;
-}
-
-// Show Point Cloud
-void showPointCloud(vector<Vector4d, Eigen::aligned_allocator<Vector4d>> pointcloud) {
+// showPointCloud
+void showPointCloud(vector<Vector6d, Eigen::aligned_allocator<Vector6d>> pointcloud) {
     if (pointcloud.empty()) {
         cerr << "Point cloud is empty!" << endl;
         return;
@@ -52,7 +53,7 @@ void showPointCloud(vector<Vector4d, Eigen::aligned_allocator<Vector4d>> pointcl
         glPointSize(2);
         glBegin(GL_POINTS);
         for (auto &p: pointcloud) {
-            glColor3f(p[3], p[3], p[3]);
+            glColor3f(p[3]/255.0, p[4]/255.0, p[5]/255.0);
             glVertex3d(p[0], p[1], p[2]);
         }
         glEnd();
@@ -62,49 +63,66 @@ void showPointCloud(vector<Vector4d, Eigen::aligned_allocator<Vector4d>> pointcl
     return;
 }
 
-// Make pointCloud
-// file format:
-//      Color:  [ID].png
-//      Depth:  [ID].pgm
-void makePointCloud(int id) {
-    string colorFile = "../color/" + num2str(id) + ".png";
-    string depthFile = "../depth/" + num2str(id) + ".pgm";
-    
-    // Read Image
-    cv::Mat colorImg, depthImg;
-    colorImg = cv::imread(colorFile, 0);
-    depthImg = cv::imread(depthFile, -1);
-
-    // show Image
-    cv::imshow("colorImg", colorImg);
-    cv::imshow("depthImg", depthImg);
-    cv::waitKey(0);
-
-    // pointCloud of [ID]
-    vector<Vector4d, Eigen::aligned_allocator<Vector4d>> pointCloud;
-    
-    for (size_t v=0;v<colorImg.rows;v++) {
-        for (size_t u=0;u<colorImg.cols;u++) {
-            Vector4d point(0, 0, 0, colorImg.at<uchar>(v, u) / 255.0);
-            
-            double x = (u - cx) / fx;
-            double y = (v - cy) / fy;
-            double z = depthImg.at<float>(v, u);
-            point[0] = x * z;
-            point[1] = y * z;
-            point[2] = z;
-
-            pointCloud.push_back(point);
-         }
-    }
-
-    showPointCloud(pointCloud);
-    cv::waitKey(0);
-}
-
 int main(int argc, char* argv[]) {
 
-    makePointCloud(1);
+    vector<cv::Mat> colorImgs, depthImgs;
+    vector<Sophus::SE3d> poses;
+
+    ifstream fin(base_path + "pose.txt");
+    if (!fin) {
+        cout << "ERROR: cannot find " << base_path + "pose.txt" << endl;
+        return 1;
+    }
+
+    for (int i=0;i<5;i++) {
+        boost::format fmt("%s/%d.%s");
+        colorImgs.push_back(cv::imread(base_path + (fmt % "color" % (i+1) % "png").str()));
+        depthImgs.push_back(cv::imread(base_path + (fmt % "depth" % (i+1) % "pgm").str(), -1));
+
+        double data[7] = {0};
+        for (auto &d: data) {
+            fin >> d;
+        }  
+        Sophus::SE3d pose(Eigen::Quaterniond(data[6], data[3], data[4], data[5]), Eigen::Vector3d(data[0], data[1], data[2]));
+        poses.push_back(pose);
+    }
+
+    vector<Vector6d, Eigen::aligned_allocator<Vector6d>> pointCloud;
+    pointCloud.reserve(1000000);
+
+    for (int i=0;i<5;i++) {
+        cout << "Process Image " << i+1 << endl;
+        cv::Mat colorImg = colorImgs[i];
+        cv::Mat depthImg = depthImgs[i];
+
+        cout << colorImg.rows << " " << colorImg.cols << endl;
+        cv::imshow("colorImg", colorImg);
+        cv::waitKey(0);
+
+        Sophus::SE3d T = poses[i];
+        for (int v=0;v<colorImg.rows;v++) {
+            for (int u=0;u<colorImg.cols;u++) {
+                Vector3d point(0, 0, 0);
+                
+                point[2] = depthImg.at<unsigned short>(v, u) / 1000.0;
+                point[1] = (v - cy) * point[2] / fy;
+                point[0] = (u - cx) * point[2] / fx;
+
+                Vector3d pointWorld = T * point;
+
+                Vector6d p;
+                p.head<3>() = pointWorld;
+                p[5] = colorImg.data[v * colorImg.step + u * colorImg.channels()];                  // B
+                p[4] = colorImg.data[v * colorImg.step + u * colorImg.channels() + 1];              // G
+                p[3] = colorImg.data[v * colorImg.step + u * colorImg.channels() + 2];              // R
+
+                pointCloud.push_back(p);
+            }
+        }
+    }
+
+    cout << "Total number: " << pointCloud.size() << endl;
+    showPointCloud(pointCloud);
 
     return 0;
 }

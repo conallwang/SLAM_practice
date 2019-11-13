@@ -1,6 +1,7 @@
 /home/johnson/SLAM/ch5/build/CMakeFiles/edit_cache.dir
 /home/johnson/SLAM/ch5/build/CMakeFiles/rebuild_cache.dir
 /home/johnson/SLAM/ch5/build/bin/CMakeFiles/edit_cache.dir
+/home/johnson/SLAM/ch5/build/bin/CMakeFiles/opencv_makePointCloud.dir
 /home/johnson/SLAM/ch5/build/bin/CMakeFiles/opencv_jointMap.dir
 /home/johnson/SLAM/ch5/build/bin/CMakeFiles/rebuild_cache.dir
 /home/johnson/SLAM/ch5/build/bin/CMakeFiles/opencv_base.dir

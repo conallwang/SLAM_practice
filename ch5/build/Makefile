@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named opencv_makePointCloud
+
+# Build rule for target.
+opencv_makePointCloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_makePointCloud
+.PHONY : opencv_makePointCloud
+
+# fast build rule for target.
+opencv_makePointCloud/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_makePointCloud.dir/build.make bin/CMakeFiles/opencv_makePointCloud.dir/build
+.PHONY : opencv_makePointCloud/fast
+
+#=============================================================================
 # Target rules for targets named opencv_jointMap
 
 # Build rule for target.
@@ -183,6 +196,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... opencv_makePointCloud"
 	@echo "... opencv_jointMap"
 	@echo "... opencv_base"
 	@echo "... opencv_ste"

@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+bin/CMakeFiles/opencv_makePointCloud.dir/rule:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_makePointCloud.dir/rule
+.PHONY : bin/CMakeFiles/opencv_makePointCloud.dir/rule
+
+# Convenience name for target.
+opencv_makePointCloud: bin/CMakeFiles/opencv_makePointCloud.dir/rule
+
+.PHONY : opencv_makePointCloud
+
+# fast build rule for target.
+opencv_makePointCloud/fast:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_makePointCloud.dir/build.make bin/CMakeFiles/opencv_makePointCloud.dir/build
+.PHONY : opencv_makePointCloud/fast
+
+# Convenience name for target.
 bin/CMakeFiles/opencv_jointMap.dir/rule:
 	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_jointMap.dir/rule
 .PHONY : bin/CMakeFiles/opencv_jointMap.dir/rule
@@ -239,6 +254,33 @@ opencv_jointMap.cpp.s:
 	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_jointMap.dir/build.make bin/CMakeFiles/opencv_jointMap.dir/opencv_jointMap.cpp.s
 .PHONY : opencv_jointMap.cpp.s
 
+opencv_makePointCloud.o: opencv_makePointCloud.cpp.o
+
+.PHONY : opencv_makePointCloud.o
+
+# target to build an object file
+opencv_makePointCloud.cpp.o:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_makePointCloud.dir/build.make bin/CMakeFiles/opencv_makePointCloud.dir/opencv_makePointCloud.cpp.o
+.PHONY : opencv_makePointCloud.cpp.o
+
+opencv_makePointCloud.i: opencv_makePointCloud.cpp.i
+
+.PHONY : opencv_makePointCloud.i
+
+# target to preprocess a source file
+opencv_makePointCloud.cpp.i:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_makePointCloud.dir/build.make bin/CMakeFiles/opencv_makePointCloud.dir/opencv_makePointCloud.cpp.i
+.PHONY : opencv_makePointCloud.cpp.i
+
+opencv_makePointCloud.s: opencv_makePointCloud.cpp.s
+
+.PHONY : opencv_makePointCloud.s
+
+# target to generate assembly for a file
+opencv_makePointCloud.cpp.s:
+	cd /home/johnson/SLAM/ch5/build && $(MAKE) -f bin/CMakeFiles/opencv_makePointCloud.dir/build.make bin/CMakeFiles/opencv_makePointCloud.dir/opencv_makePointCloud.cpp.s
+.PHONY : opencv_makePointCloud.cpp.s
+
 opencv_stereo.o: opencv_stereo.cpp.o
 
 .PHONY : opencv_stereo.o
@@ -327,6 +369,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... opencv_makePointCloud"
 	@echo "... opencv_jointMap"
 	@echo "... rebuild_cache"
 	@echo "... opencv_base"
@@ -339,6 +382,9 @@ help:
 	@echo "... opencv_jointMap.o"
 	@echo "... opencv_jointMap.i"
 	@echo "... opencv_jointMap.s"
+	@echo "... opencv_makePointCloud.o"
+	@echo "... opencv_makePointCloud.i"
+	@echo "... opencv_makePointCloud.s"
 	@echo "... opencv_stereo.o"
 	@echo "... opencv_stereo.i"
 	@echo "... opencv_stereo.s"
