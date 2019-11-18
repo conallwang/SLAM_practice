@@ -1,10 +1,10 @@
 #include <iostream>
-#include <stdlib.h>
 #include <stdio.h>
 #include <string>
 #include <cstring>
 #include <fstream>
 #include <iomanip>
+#include <chrono>
 using namespace std;
 
 #include <opencv2/opencv.hpp>
@@ -16,6 +16,9 @@ using namespace Eigen;
 // Initialize function, no this func
 // need to analyze function
 string func = "";
+
+// option
+bool is_batch = true;
 
 // three arguments ax^2 + bx + c
 int a = 0;
@@ -39,7 +42,8 @@ double learning_rate = 1.0;
 void printUsage() {
     printf("USAGE: ./curveFitting_GN a=[SELF_ARG] b=[SELF_ARG] c=[SELF_ARG] [savefile=[SAVE_FILE_PATH]]\n\n");
     printf("ARGUMENTS: \n");
-    printf("    -h          print user help\n");
+    printf("    help        print user help\n");
+    printf("    single      single without batch\n");
     printf("    a           set argument a\n");
     printf("    b           set argument b\n");
     printf("    c           set argument c\n");
@@ -48,6 +52,7 @@ void printUsage() {
     printf("    finish      end of data\n");
     printf("    savefile    set save file path\n");
     printf("    iter        num of loop \n");
+    printf("    r_err       receive error\n");
     printf("    lr          like learning rate in Machine Learning\n");
     return ;
 }
@@ -125,8 +130,13 @@ void parseArgument(char* arg) {
         return;
     }
 
-    if (1==sscanf(arg, "-h")) {
+    if (1==sscanf(arg, "help=%d", &option)) {
         printUsage();
+        return;
+    }
+
+    if (1==sscanf(arg, "single=%d", &option)) {
+        if (option == 1) is_batch = false;
         return;
     }
 }
@@ -182,46 +192,101 @@ int main(int argc, char* argv[]) {
     // set initial value of [a, b, c]
     Vector3d arg(2.0, -1.0, 5.0);
 
+    // Timing
+    chrono::steady_clock::time_point start_time = chrono::steady_clock::now();
+
     // with batch 
-    double cost = 0;
-    double last_cost = 0;
-    for (int epoch=0;epoch<num_iter;epoch++) {
-        int d_size = x_data.size();
-        Matrix3d JJT = Matrix3d::Zero();
-        Vector3d Je(0, 0, 0);
+    if (is_batch) {
+        printf("[STATUS] Computing in batch ...\n");
+        double cost = 0;
+        double last_cost = 0;
+        for (int epoch=0;epoch<num_iter;epoch++) {
+            int d_size = x_data.size();
+            Matrix3d JJT = Matrix3d::Zero();
+            Vector3d Je(0, 0, 0);
 
-        cost = 0.0;
-        for (int i=0;i<d_size;i++) {
-            double x = x_data[i];
-            double y = y_data[i];
-        
-            Vector3d J;
-            J[0] = -x*x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
-            J[1] = -x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
-            J[2] = -exp(arg[0]*x*x + arg[1]*x + arg[2]);
+            cost = 0.0;
+            for (int i=0;i<d_size;i++) {
+                double x = x_data[i];
+                double y = y_data[i];
             
-            double e = y - exp(arg[0]*x*x + arg[1]*x + arg[2]);
-            
-            cost += e * e;
-            // JJT += inv_sigmma * inv_sigmma * J*J.transpose();
-            // Je += -inv_sigmma * inv_sigmma * J*e;
+                Vector3d J;
+                J[0] = -x*x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                J[1] = -x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                J[2] = -exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                
+                double e = y - exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                
+                cost += e * e;
+                // JJT += inv_sigmma * inv_sigmma * J*J.transpose();
+                // Je += -inv_sigmma * inv_sigmma * J*e;
 
-            JJT += inv_sigmma * inv_sigmma * J*J.transpose();
-            Je += -inv_sigmma * inv_sigmma * J*e;
+                JJT += J*J.transpose();
+                Je += -J*e;
+            }
+            
+            // Vector3d dx = JJT.inverse() * Je;
+            Vector3d dx = JJT.ldlt().solve(Je);
+            // cout << dx.transpose() << endl;
+            arg += learning_rate * dx;
+            if (abs(cost - last_cost) <= receive_err) {
+                break;
+            }
+            last_cost = cost;
+            printf("[INFO] iter = %d, cost = %f\n", epoch, cost);
         }
-        
-        Vector3d dx = JJT.inverse() * Je;
-        // cout << dx.transpose() << endl;
-        arg += learning_rate * dx;
-        if (abs(cost - last_cost) <= receive_err) {
-            break;
+    }
+    // cannot to do with this func
+    // because this func just think each single data, the goal of GN is to minimize the sum of error.
+    else {
+        printf("[STATUS] Computing no batch ...\n");
+        double cost = 0;
+        double last_cost = 0;
+        bool flag = false;
+        for (int epoch=0;epoch<num_iter&&!flag;) {
+            int d_size = x_data.size();
+            Matrix3d JJT = Matrix3d::Zero();
+            Vector3d Je(0, 0, 0);
+            for (int i=0;i<d_size&&!flag;i++) {
+                cost = 0;
+
+                double x = x_data[i];
+                double y = y_data[i];
+
+                Vector3d J;
+                J[0] = -x*x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                J[1] = -x*exp(arg[0]*x*x + arg[1]*x + arg[2]);
+                J[2] = -exp(arg[0]*x*x + arg[1]*x + arg[2]);
+
+                double error = y - exp(arg[0]*x*x + arg[1]*x + arg[2]);
+
+                cost = error * error;
+
+                if (abs(cost - last_cost) <= receive_err) {
+                    flag = true;
+                    continue;
+                }
+
+                JJT = J*J.transpose();
+                Je = -J*error;
+
+                Vector3d dx = JJT.inverse() * Je;
+                arg += learning_rate * dx;
+                last_cost = cost;
+                epoch++;
+                printf("[INFO] iter = %d, cost = %f\n", epoch, cost);
+            }
         }
-        last_cost = cost;
-        printf("[INFO] iter = %d, cost = %f\n", epoch, cost);
     }
 
-    cout << "Opt Finish!" << endl;
-    cout << "Final Result: " << arg.transpose() << endl;
+    //Timing
+    chrono::steady_clock::time_point end_time = chrono::steady_clock::now();
+    chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(end_time - start_time);
+
+    printf("\n[INFO] Time: %f seconds.", time_used.count());
+
+    cout << " Opt Finish!" << endl;
+    cout << " Final Result: " << arg.transpose() << endl;
 
     return 0;
 }

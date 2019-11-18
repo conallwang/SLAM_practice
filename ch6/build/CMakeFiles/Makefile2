@@ -64,11 +64,17 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch6/build
 
 # Convenience name for "all" pass in the directory.
 bin/all: bin/CMakeFiles/curveFitting_GN.dir/all
+bin/all: bin/CMakeFiles/curveFitting_g2o.dir/all
+bin/all: bin/CMakeFiles/curveFitting_LM.dir/all
+bin/all: bin/CMakeFiles/curveFitting_ceres.dir/all
 
 .PHONY : bin/all
 
 # Convenience name for "clean" pass in the directory.
 bin/clean: bin/CMakeFiles/curveFitting_GN.dir/clean
+bin/clean: bin/CMakeFiles/curveFitting_g2o.dir/clean
+bin/clean: bin/CMakeFiles/curveFitting_LM.dir/clean
+bin/clean: bin/CMakeFiles/curveFitting_ceres.dir/clean
 
 .PHONY : bin/clean
 
@@ -111,6 +117,117 @@ bin/CMakeFiles/curveFitting_GN.dir/clean:
 
 # clean rule for target.
 clean: bin/CMakeFiles/curveFitting_GN.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/curveFitting_g2o.dir
+
+# All Build rule for target.
+bin/CMakeFiles/curveFitting_g2o.dir/all:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/depend
+	$(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch6/build/CMakeFiles --progress-num=7,8 "Built target curveFitting_g2o"
+.PHONY : bin/CMakeFiles/curveFitting_g2o.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/curveFitting_g2o.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/curveFitting_g2o.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_g2o.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/curveFitting_g2o.dir/rule
+
+# Convenience name for target.
+curveFitting_g2o: bin/CMakeFiles/curveFitting_g2o.dir/rule
+
+.PHONY : curveFitting_g2o
+
+# clean rule for target.
+bin/CMakeFiles/curveFitting_g2o.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/clean
+.PHONY : bin/CMakeFiles/curveFitting_g2o.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/curveFitting_g2o.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/curveFitting_LM.dir
+
+# All Build rule for target.
+bin/CMakeFiles/curveFitting_LM.dir/all:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/depend
+	$(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch6/build/CMakeFiles --progress-num=3,4 "Built target curveFitting_LM"
+.PHONY : bin/CMakeFiles/curveFitting_LM.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/curveFitting_LM.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/curveFitting_LM.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_LM.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/curveFitting_LM.dir/rule
+
+# Convenience name for target.
+curveFitting_LM: bin/CMakeFiles/curveFitting_LM.dir/rule
+
+.PHONY : curveFitting_LM
+
+# clean rule for target.
+bin/CMakeFiles/curveFitting_LM.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/clean
+.PHONY : bin/CMakeFiles/curveFitting_LM.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/curveFitting_LM.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/curveFitting_ceres.dir
+
+# All Build rule for target.
+bin/CMakeFiles/curveFitting_ceres.dir/all:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/depend
+	$(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch6/build/CMakeFiles --progress-num=5,6 "Built target curveFitting_ceres"
+.PHONY : bin/CMakeFiles/curveFitting_ceres.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/curveFitting_ceres.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/curveFitting_ceres.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_ceres.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch6/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/curveFitting_ceres.dir/rule
+
+# Convenience name for target.
+curveFitting_ceres: bin/CMakeFiles/curveFitting_ceres.dir/rule
+
+.PHONY : curveFitting_ceres
+
+# clean rule for target.
+bin/CMakeFiles/curveFitting_ceres.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/clean
+.PHONY : bin/CMakeFiles/curveFitting_ceres.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/curveFitting_ceres.dir/clean
 
 .PHONY : clean
 

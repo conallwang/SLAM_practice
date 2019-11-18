@@ -9,8 +9,6 @@
 /home/johnson/SLAM/ch6/self/curveFitting_GN.cpp
 iostream
 -
-stdlib.h
--
 stdio.h
 -
 string
@@ -20,6 +18,8 @@ cstring
 fstream
 -
 iomanip
+-
+chrono
 -
 opencv2/opencv.hpp
 -

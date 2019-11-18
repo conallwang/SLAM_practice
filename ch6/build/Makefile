@@ -123,6 +123,45 @@ curveFitting_GN/fast:
 	$(MAKE) -f bin/CMakeFiles/curveFitting_GN.dir/build.make bin/CMakeFiles/curveFitting_GN.dir/build
 .PHONY : curveFitting_GN/fast
 
+#=============================================================================
+# Target rules for targets named curveFitting_g2o
+
+# Build rule for target.
+curveFitting_g2o: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 curveFitting_g2o
+.PHONY : curveFitting_g2o
+
+# fast build rule for target.
+curveFitting_g2o/fast:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/build
+.PHONY : curveFitting_g2o/fast
+
+#=============================================================================
+# Target rules for targets named curveFitting_LM
+
+# Build rule for target.
+curveFitting_LM: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 curveFitting_LM
+.PHONY : curveFitting_LM
+
+# fast build rule for target.
+curveFitting_LM/fast:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/build
+.PHONY : curveFitting_LM/fast
+
+#=============================================================================
+# Target rules for targets named curveFitting_ceres
+
+# Build rule for target.
+curveFitting_ceres: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 curveFitting_ceres
+.PHONY : curveFitting_ceres
+
+# fast build rule for target.
+curveFitting_ceres/fast:
+	$(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/build
+.PHONY : curveFitting_ceres/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +171,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... curveFitting_GN"
+	@echo "... curveFitting_g2o"
+	@echo "... curveFitting_LM"
+	@echo "... curveFitting_ceres"
 .PHONY : help
 
 

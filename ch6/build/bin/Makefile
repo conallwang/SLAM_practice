@@ -125,6 +125,51 @@ curveFitting_GN/fast:
 	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_GN.dir/build.make bin/CMakeFiles/curveFitting_GN.dir/build
 .PHONY : curveFitting_GN/fast
 
+# Convenience name for target.
+bin/CMakeFiles/curveFitting_g2o.dir/rule:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_g2o.dir/rule
+.PHONY : bin/CMakeFiles/curveFitting_g2o.dir/rule
+
+# Convenience name for target.
+curveFitting_g2o: bin/CMakeFiles/curveFitting_g2o.dir/rule
+
+.PHONY : curveFitting_g2o
+
+# fast build rule for target.
+curveFitting_g2o/fast:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/build
+.PHONY : curveFitting_g2o/fast
+
+# Convenience name for target.
+bin/CMakeFiles/curveFitting_LM.dir/rule:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_LM.dir/rule
+.PHONY : bin/CMakeFiles/curveFitting_LM.dir/rule
+
+# Convenience name for target.
+curveFitting_LM: bin/CMakeFiles/curveFitting_LM.dir/rule
+
+.PHONY : curveFitting_LM
+
+# fast build rule for target.
+curveFitting_LM/fast:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/build
+.PHONY : curveFitting_LM/fast
+
+# Convenience name for target.
+bin/CMakeFiles/curveFitting_ceres.dir/rule:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/curveFitting_ceres.dir/rule
+.PHONY : bin/CMakeFiles/curveFitting_ceres.dir/rule
+
+# Convenience name for target.
+curveFitting_ceres: bin/CMakeFiles/curveFitting_ceres.dir/rule
+
+.PHONY : curveFitting_ceres
+
+# fast build rule for target.
+curveFitting_ceres/fast:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/build
+.PHONY : curveFitting_ceres/fast
+
 curveFitting_GN.o: curveFitting_GN.cpp.o
 
 .PHONY : curveFitting_GN.o
@@ -152,6 +197,87 @@ curveFitting_GN.cpp.s:
 	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_GN.dir/build.make bin/CMakeFiles/curveFitting_GN.dir/curveFitting_GN.cpp.s
 .PHONY : curveFitting_GN.cpp.s
 
+curveFitting_LM.o: curveFitting_LM.cpp.o
+
+.PHONY : curveFitting_LM.o
+
+# target to build an object file
+curveFitting_LM.cpp.o:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/curveFitting_LM.cpp.o
+.PHONY : curveFitting_LM.cpp.o
+
+curveFitting_LM.i: curveFitting_LM.cpp.i
+
+.PHONY : curveFitting_LM.i
+
+# target to preprocess a source file
+curveFitting_LM.cpp.i:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/curveFitting_LM.cpp.i
+.PHONY : curveFitting_LM.cpp.i
+
+curveFitting_LM.s: curveFitting_LM.cpp.s
+
+.PHONY : curveFitting_LM.s
+
+# target to generate assembly for a file
+curveFitting_LM.cpp.s:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_LM.dir/build.make bin/CMakeFiles/curveFitting_LM.dir/curveFitting_LM.cpp.s
+.PHONY : curveFitting_LM.cpp.s
+
+curveFitting_ceres.o: curveFitting_ceres.cpp.o
+
+.PHONY : curveFitting_ceres.o
+
+# target to build an object file
+curveFitting_ceres.cpp.o:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/curveFitting_ceres.cpp.o
+.PHONY : curveFitting_ceres.cpp.o
+
+curveFitting_ceres.i: curveFitting_ceres.cpp.i
+
+.PHONY : curveFitting_ceres.i
+
+# target to preprocess a source file
+curveFitting_ceres.cpp.i:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/curveFitting_ceres.cpp.i
+.PHONY : curveFitting_ceres.cpp.i
+
+curveFitting_ceres.s: curveFitting_ceres.cpp.s
+
+.PHONY : curveFitting_ceres.s
+
+# target to generate assembly for a file
+curveFitting_ceres.cpp.s:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_ceres.dir/build.make bin/CMakeFiles/curveFitting_ceres.dir/curveFitting_ceres.cpp.s
+.PHONY : curveFitting_ceres.cpp.s
+
+curveFitting_g2o.o: curveFitting_g2o.cpp.o
+
+.PHONY : curveFitting_g2o.o
+
+# target to build an object file
+curveFitting_g2o.cpp.o:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/curveFitting_g2o.cpp.o
+.PHONY : curveFitting_g2o.cpp.o
+
+curveFitting_g2o.i: curveFitting_g2o.cpp.i
+
+.PHONY : curveFitting_g2o.i
+
+# target to preprocess a source file
+curveFitting_g2o.cpp.i:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/curveFitting_g2o.cpp.i
+.PHONY : curveFitting_g2o.cpp.i
+
+curveFitting_g2o.s: curveFitting_g2o.cpp.s
+
+.PHONY : curveFitting_g2o.s
+
+# target to generate assembly for a file
+curveFitting_g2o.cpp.s:
+	cd /home/johnson/SLAM/ch6/build && $(MAKE) -f bin/CMakeFiles/curveFitting_g2o.dir/build.make bin/CMakeFiles/curveFitting_g2o.dir/curveFitting_g2o.cpp.s
+.PHONY : curveFitting_g2o.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,11 +285,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... curveFitting_GN"
+	@echo "... curveFitting_g2o"
+	@echo "... edit_cache"
+	@echo "... curveFitting_LM"
+	@echo "... curveFitting_ceres"
 	@echo "... curveFitting_GN.o"
 	@echo "... curveFitting_GN.i"
 	@echo "... curveFitting_GN.s"
+	@echo "... curveFitting_LM.o"
+	@echo "... curveFitting_LM.i"
+	@echo "... curveFitting_LM.s"
+	@echo "... curveFitting_ceres.o"
+	@echo "... curveFitting_ceres.i"
+	@echo "... curveFitting_ceres.s"
+	@echo "... curveFitting_g2o.o"
+	@echo "... curveFitting_g2o.i"
+	@echo "... curveFitting_g2o.s"
 .PHONY : help
 
 
