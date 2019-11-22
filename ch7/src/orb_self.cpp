@@ -21,8 +21,8 @@ int main(int argc, char* argv[]) {
     // Open images 
     printf("[STATUS] Starting open images ... \n");
 
-    cv::Mat image_1 = cv::imread(img_1, CV_LOAD_IMAGE_COLOR);
-    cv::Mat image_2 = cv::imread(img_2, CV_LOAD_IMAGE_COLOR);
+    cv::Mat image_1 = cv::imread(img_1, 0);
+    cv::Mat image_2 = cv::imread(img_2, 0);
 
     if (image_1.data == nullptr || image_2.data == nullptr) {
         printf("[ERROR] Cannot open image. \n");
@@ -43,6 +43,16 @@ int main(int argc, char* argv[]) {
 
     printf("[STATUS] Extract finish. \n");
 
+    cv::Mat outImg1, outImg2;
+    cv::drawKeypoints(image_1, keypoints_1, outImg1);
+    cv::drawKeypoints(image_2, keypoints_2, outImg2);
+
+    cv::imshow("KeyPoints1", outImg1);
+    cv::imshow("KeyPoints2", outImg2);
+    cv::waitKey(0);
+    // 
+
+    /*
     // Compute descriptors
     printf("\n[STATUS] Starting computing descriptor ... \n");
     cv::Mat descriptors_1, descriptors_2;
@@ -63,5 +73,5 @@ int main(int argc, char* argv[]) {
     // Good Match
 
     // show
-
+    */
 }

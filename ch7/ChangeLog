@@ -1,0 +1,11 @@
+Johnson     20191119    17:26
+
+1. 完成orb_utils中FAST角点提取的函数，但不知道为什么无法在函数中用将cvtColor将RGB图转化为灰度图，会出现Segmentation fault.
+2. 目前仍然有BUG，除了上述1，目前处理图片需要分开进行，先imread图片一，处理图片一，再读图片2，处理图片2，如果同时读入，则后读入的那个图片无法处理(还未找到原因)。
+
+Johnson     20191121    17:13
+
+1. 完成orb_utils中的FAST角点提取、BRIEF描述子、BruteMatch函数的实现
+2. 解决之前的问题，对于上述1问题，不是cvtColor的问题，是之前在FeatureExtract函数中，出现了数组越界的问题，具体是我取了Margin为3里面的像素点，但是batch_size大于3，导致访问了图像之外的像素点。
+3. 对于上述2问题，也是这样，除此之外又遇到了ComputeORB时候的问题，就是OpenCV中图像坐标的问题，图像坐标原点在左上角，向右是X轴，向下是y轴。
+4. 时间问题，主要是计算HammingDistance的时候，利用SSE指令集会快很多，orb_utils.cpp的lines 278，但最后还是比SLAM book中说的效果慢不少。

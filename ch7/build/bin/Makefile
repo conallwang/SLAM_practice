@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch7/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+bin/CMakeFiles/orb_utils.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_utils.dir/rule
+.PHONY : bin/CMakeFiles/orb_utils.dir/rule
+
+# Convenience name for target.
+orb_utils: bin/CMakeFiles/orb_utils.dir/rule
+
+.PHONY : orb_utils
+
+# fast build rule for target.
+orb_utils/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/build
+.PHONY : orb_utils/fast
+
+# Convenience name for target.
 bin/CMakeFiles/orb_cv.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_cv.dir/rule
 .PHONY : bin/CMakeFiles/orb_cv.dir/rule
@@ -124,6 +139,51 @@ orb_cv: bin/CMakeFiles/orb_cv.dir/rule
 orb_cv/fast:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
 .PHONY : orb_cv/fast
+
+# Convenience name for target.
+bin/CMakeFiles/orb_self.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_self.dir/rule
+.PHONY : bin/CMakeFiles/orb_self.dir/rule
+
+# Convenience name for target.
+orb_self: bin/CMakeFiles/orb_self.dir/rule
+
+.PHONY : orb_self
+
+# fast build rule for target.
+orb_self/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
+.PHONY : orb_self/fast
+
+# Convenience name for target.
+bin/CMakeFiles/orb_test.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_test.dir/rule
+.PHONY : bin/CMakeFiles/orb_test.dir/rule
+
+# Convenience name for target.
+orb_test: bin/CMakeFiles/orb_test.dir/rule
+
+.PHONY : orb_test
+
+# fast build rule for target.
+orb_test/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
+.PHONY : orb_test/fast
+
+# Convenience name for target.
+bin/CMakeFiles/test1.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/rule
+.PHONY : bin/CMakeFiles/test1.dir/rule
+
+# Convenience name for target.
+test1: bin/CMakeFiles/test1.dir/rule
+
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
+.PHONY : test1/fast
 
 orb_cv.o: orb_cv.cpp.o
 
@@ -152,18 +212,148 @@ orb_cv.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/orb_cv.cpp.s
 .PHONY : orb_cv.cpp.s
 
+orb_self.o: orb_self.cpp.o
+
+.PHONY : orb_self.o
+
+# target to build an object file
+orb_self.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/orb_self.cpp.o
+.PHONY : orb_self.cpp.o
+
+orb_self.i: orb_self.cpp.i
+
+.PHONY : orb_self.i
+
+# target to preprocess a source file
+orb_self.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/orb_self.cpp.i
+.PHONY : orb_self.cpp.i
+
+orb_self.s: orb_self.cpp.s
+
+.PHONY : orb_self.s
+
+# target to generate assembly for a file
+orb_self.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/orb_self.cpp.s
+.PHONY : orb_self.cpp.s
+
+orb_test.o: orb_test.cpp.o
+
+.PHONY : orb_test.o
+
+# target to build an object file
+orb_test.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_test.cpp.o
+.PHONY : orb_test.cpp.o
+
+orb_test.i: orb_test.cpp.i
+
+.PHONY : orb_test.i
+
+# target to preprocess a source file
+orb_test.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_test.cpp.i
+.PHONY : orb_test.cpp.i
+
+orb_test.s: orb_test.cpp.s
+
+.PHONY : orb_test.s
+
+# target to generate assembly for a file
+orb_test.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_test.cpp.s
+.PHONY : orb_test.cpp.s
+
+orb_utils.o: orb_utils.cpp.o
+
+.PHONY : orb_utils.o
+
+# target to build an object file
+orb_utils.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
+.PHONY : orb_utils.cpp.o
+
+orb_utils.i: orb_utils.cpp.i
+
+.PHONY : orb_utils.i
+
+# target to preprocess a source file
+orb_utils.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
+.PHONY : orb_utils.cpp.i
+
+orb_utils.s: orb_utils.cpp.s
+
+.PHONY : orb_utils.s
+
+# target to generate assembly for a file
+orb_utils.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
+.PHONY : orb_utils.cpp.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... orb_utils"
 	@echo "... orb_cv"
+	@echo "... edit_cache"
+	@echo "... orb_self"
+	@echo "... orb_test"
+	@echo "... test1"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"
+	@echo "... orb_self.o"
+	@echo "... orb_self.i"
+	@echo "... orb_self.s"
+	@echo "... orb_test.o"
+	@echo "... orb_test.i"
+	@echo "... orb_test.s"
+	@echo "... orb_utils.o"
+	@echo "... orb_utils.i"
+	@echo "... orb_utils.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

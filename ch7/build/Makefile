@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named orb_utils
+
+# Build rule for target.
+orb_utils: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_utils
+.PHONY : orb_utils
+
+# fast build rule for target.
+orb_utils/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/build
+.PHONY : orb_utils/fast
+
+#=============================================================================
 # Target rules for targets named orb_cv
 
 # Build rule for target.
@@ -123,6 +136,45 @@ orb_cv/fast:
 	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
 .PHONY : orb_cv/fast
 
+#=============================================================================
+# Target rules for targets named orb_self
+
+# Build rule for target.
+orb_self: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_self
+.PHONY : orb_self
+
+# fast build rule for target.
+orb_self/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
+.PHONY : orb_self/fast
+
+#=============================================================================
+# Target rules for targets named orb_test
+
+# Build rule for target.
+orb_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_test
+.PHONY : orb_test
+
+# fast build rule for target.
+orb_test/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
+.PHONY : orb_test/fast
+
+#=============================================================================
+# Target rules for targets named test1
+
+# Build rule for target.
+test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
+.PHONY : test1/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -131,7 +183,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... orb_utils"
 	@echo "... orb_cv"
+	@echo "... orb_self"
+	@echo "... orb_test"
+	@echo "... test1"
 .PHONY : help
 
 

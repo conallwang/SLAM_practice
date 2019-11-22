@@ -63,12 +63,20 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch7/build
 # Directory level rules for directory bin
 
 # Convenience name for "all" pass in the directory.
+bin/all: bin/CMakeFiles/orb_utils.dir/all
 bin/all: bin/CMakeFiles/orb_cv.dir/all
+bin/all: bin/CMakeFiles/orb_self.dir/all
+bin/all: bin/CMakeFiles/orb_test.dir/all
+bin/all: bin/CMakeFiles/test1.dir/all
 
 .PHONY : bin/all
 
 # Convenience name for "clean" pass in the directory.
+bin/clean: bin/CMakeFiles/orb_utils.dir/clean
 bin/clean: bin/CMakeFiles/orb_cv.dir/clean
+bin/clean: bin/CMakeFiles/orb_self.dir/clean
+bin/clean: bin/CMakeFiles/orb_test.dir/clean
+bin/clean: bin/CMakeFiles/test1.dir/clean
 
 .PHONY : bin/clean
 
@@ -76,6 +84,43 @@ bin/clean: bin/CMakeFiles/orb_cv.dir/clean
 bin/preinstall:
 
 .PHONY : bin/preinstall
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/orb_utils.dir
+
+# All Build rule for target.
+bin/CMakeFiles/orb_utils.dir/all:
+	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/depend
+	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=8,9 "Built target orb_utils"
+.PHONY : bin/CMakeFiles/orb_utils.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/orb_utils.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/orb_utils.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_utils.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/orb_utils.dir/rule
+
+# Convenience name for target.
+orb_utils: bin/CMakeFiles/orb_utils.dir/rule
+
+.PHONY : orb_utils
+
+# clean rule for target.
+bin/CMakeFiles/orb_utils.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/clean
+.PHONY : bin/CMakeFiles/orb_utils.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/orb_utils.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target bin/CMakeFiles/orb_cv.dir
@@ -111,6 +156,117 @@ bin/CMakeFiles/orb_cv.dir/clean:
 
 # clean rule for target.
 clean: bin/CMakeFiles/orb_cv.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/orb_self.dir
+
+# All Build rule for target.
+bin/CMakeFiles/orb_self.dir/all:
+	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/depend
+	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=3,4 "Built target orb_self"
+.PHONY : bin/CMakeFiles/orb_self.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/orb_self.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/orb_self.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_self.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/orb_self.dir/rule
+
+# Convenience name for target.
+orb_self: bin/CMakeFiles/orb_self.dir/rule
+
+.PHONY : orb_self
+
+# clean rule for target.
+bin/CMakeFiles/orb_self.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/clean
+.PHONY : bin/CMakeFiles/orb_self.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/orb_self.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/orb_test.dir
+
+# All Build rule for target.
+bin/CMakeFiles/orb_test.dir/all:
+	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/depend
+	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=5,6,7 "Built target orb_test"
+.PHONY : bin/CMakeFiles/orb_test.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/orb_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/orb_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/orb_test.dir/rule
+
+# Convenience name for target.
+orb_test: bin/CMakeFiles/orb_test.dir/rule
+
+.PHONY : orb_test
+
+# clean rule for target.
+bin/CMakeFiles/orb_test.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/clean
+.PHONY : bin/CMakeFiles/orb_test.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/orb_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/test1.dir
+
+# All Build rule for target.
+bin/CMakeFiles/test1.dir/all:
+	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/depend
+	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=10,11,12 "Built target test1"
+.PHONY : bin/CMakeFiles/test1.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/test1.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/test1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/test1.dir/rule
+
+# Convenience name for target.
+test1: bin/CMakeFiles/test1.dir/rule
+
+.PHONY : test1
+
+# clean rule for target.
+bin/CMakeFiles/test1.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/clean
+.PHONY : bin/CMakeFiles/test1.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/test1.dir/clean
 
 .PHONY : clean
 
