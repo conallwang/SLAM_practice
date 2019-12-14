@@ -12,6 +12,8 @@
 using namespace std;
 
 #include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
@@ -100,5 +102,8 @@ void Match(vector<Descriptor> descriptors_1, vector<Descriptor> descriptors_2, v
 
 // Show Match Results
 void ShowMatch(string gragh_name, cv::Mat image_1, vector<mKeyPoint> keypoints_1, cv::Mat image_2, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches);
+
+// Compute essential matrix and fundamental matrix
+void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat& R, cv::Mat& t);
 
 #endif

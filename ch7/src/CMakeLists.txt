@@ -29,5 +29,10 @@ target_link_libraries(test1
     ${OpenCV_LIBS}
 )
 
+add_executable(2d2d 2d2d.cpp orb_utils.hpp orb_utils.cpp)
+target_link_libraries(2d2d
+    ${OpenCV_LIBS}
+)
+
 # .so
 add_library(orb_utils SHARED orb_utils.hpp orb_utils.cpp)

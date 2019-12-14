@@ -25,6 +25,10 @@ algorithm
 -
 opencv2/opencv.hpp
 -
+opencv2/core/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
 eigen3/Eigen/Core
 -
 eigen3/Eigen/Dense

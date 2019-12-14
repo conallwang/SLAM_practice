@@ -150,6 +150,19 @@ orb_self/fast:
 .PHONY : orb_self/fast
 
 #=============================================================================
+# Target rules for targets named 2d2d
+
+# Build rule for target.
+2d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2d2d
+.PHONY : 2d2d
+
+# fast build rule for target.
+2d2d/fast:
+	$(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
+.PHONY : 2d2d/fast
+
+#=============================================================================
 # Target rules for targets named orb_test
 
 # Build rule for target.
@@ -186,6 +199,7 @@ help:
 	@echo "... orb_utils"
 	@echo "... orb_cv"
 	@echo "... orb_self"
+	@echo "... 2d2d"
 	@echo "... orb_test"
 	@echo "... test1"
 .PHONY : help

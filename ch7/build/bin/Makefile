@@ -156,6 +156,21 @@ orb_self/fast:
 .PHONY : orb_self/fast
 
 # Convenience name for target.
+bin/CMakeFiles/2d2d.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/2d2d.dir/rule
+.PHONY : bin/CMakeFiles/2d2d.dir/rule
+
+# Convenience name for target.
+2d2d: bin/CMakeFiles/2d2d.dir/rule
+
+.PHONY : 2d2d
+
+# fast build rule for target.
+2d2d/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
+.PHONY : 2d2d/fast
+
+# Convenience name for target.
 bin/CMakeFiles/orb_test.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_test.dir/rule
 .PHONY : bin/CMakeFiles/orb_test.dir/rule
@@ -184,6 +199,33 @@ test1: bin/CMakeFiles/test1.dir/rule
 test1/fast:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
 .PHONY : test1/fast
+
+2d2d.o: 2d2d.cpp.o
+
+.PHONY : 2d2d.o
+
+# target to build an object file
+2d2d.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/2d2d.cpp.o
+.PHONY : 2d2d.cpp.o
+
+2d2d.i: 2d2d.cpp.i
+
+.PHONY : 2d2d.i
+
+# target to preprocess a source file
+2d2d.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/2d2d.cpp.i
+.PHONY : 2d2d.cpp.i
+
+2d2d.s: 2d2d.cpp.s
+
+.PHONY : 2d2d.s
+
+# target to generate assembly for a file
+2d2d.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/2d2d.cpp.s
+.PHONY : 2d2d.cpp.s
 
 orb_cv.o: orb_cv.cpp.o
 
@@ -273,6 +315,7 @@ orb_utils.o: orb_utils.cpp.o
 # target to build an object file
 orb_utils.cpp.o:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
 .PHONY : orb_utils.cpp.o
@@ -284,6 +327,7 @@ orb_utils.i: orb_utils.cpp.i
 # target to preprocess a source file
 orb_utils.cpp.i:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
 .PHONY : orb_utils.cpp.i
@@ -295,6 +339,7 @@ orb_utils.s: orb_utils.cpp.s
 # target to generate assembly for a file
 orb_utils.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
 .PHONY : orb_utils.cpp.s
@@ -337,8 +382,12 @@ help:
 	@echo "... orb_cv"
 	@echo "... edit_cache"
 	@echo "... orb_self"
+	@echo "... 2d2d"
 	@echo "... orb_test"
 	@echo "... test1"
+	@echo "... 2d2d.o"
+	@echo "... 2d2d.i"
+	@echo "... 2d2d.s"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"

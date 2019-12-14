@@ -481,6 +481,8 @@ void Match(vector<Descriptor> descriptors_1, vector<Descriptor> descriptors_2, v
         if (match.distance < d_max) 
             matches.push_back(match);
     }
+
+    printf("[INFO] Match Points: %d", (int)matches.size());
 }
 
 // Show Match
@@ -523,4 +525,43 @@ void ShowMatch(string gragh_name, cv::Mat image_1, vector<mKeyPoint> keypoints_1
     }
 
     cv::imshow(gragh_name, img_merge);
+}
+
+// pose estimate
+void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat& R, cv::Mat& t) {
+    // camera calib
+    cv::Mat K = (cv::Mat_<double>(3, 3) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1);
+
+    // Convert mKeyPoint into cv::Point2f
+    vector<cv::Point2f> points_1;
+    vector<cv::Point2f> points_2;
+
+    int m_size = matches.size();
+    for (int i=0;i<m_size;i++) {
+        points_1.push_back(cv::Point2f(keypoints_1[i].GetPt().first, keypoints_1[i].GetPt().second));
+        points_2.push_back(cv::Point2f(keypoints_2[i].GetPt().first, keypoints_2[i].GetPt().second));
+    }
+
+    // Compute Fundamental Matrix
+    cv::Mat fundamental_matrix;
+    fundamental_matrix = cv::findFundamentalMat(points_1, points_2, CV_FM_8POINT);
+    cout << "\n[INFO] fundamental matrix: \n" << fundamental_matrix << endl;
+
+    // Compute Essential Matrix
+    cv::Mat essential_matrix;
+    cv::Point2d principal_point(325.1, 249.7);
+    double focal_length = 521;
+    essential_matrix = cv::findEssentialMat(points_1, points_2, focal_length, principal_point);
+    cout << "\n[INFO] essential matrix: \n" << essential_matrix << endl;
+
+    // Compute Homography
+    cv::Mat homography_matrix;
+    homography_matrix = cv::findHomography(points_1, points_2, cv::RANSAC, 3);
+    cout << "\n[INFO] homography_matrix: \n" << homography_matrix << endl;
+
+    // Get R and t
+    cv::recoverPose(essential_matrix, points_1, points_2, R, t, focal_length, principal_point);
+    cout << "\n[INFO] R: \n" << R << endl;
+    cout << "[INFO] t: \n" << t << endl;
+
 }
