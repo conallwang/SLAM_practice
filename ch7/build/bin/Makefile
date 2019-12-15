@@ -156,6 +156,21 @@ orb_self/fast:
 .PHONY : orb_self/fast
 
 # Convenience name for target.
+bin/CMakeFiles/triangulation.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/triangulation.dir/rule
+.PHONY : bin/CMakeFiles/triangulation.dir/rule
+
+# Convenience name for target.
+triangulation: bin/CMakeFiles/triangulation.dir/rule
+
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
+
+# Convenience name for target.
 bin/CMakeFiles/2d2d.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/2d2d.dir/rule
 .PHONY : bin/CMakeFiles/2d2d.dir/rule
@@ -315,6 +330,7 @@ orb_utils.o: orb_utils.cpp.o
 # target to build an object file
 orb_utils.cpp.o:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
@@ -327,6 +343,7 @@ orb_utils.i: orb_utils.cpp.i
 # target to preprocess a source file
 orb_utils.cpp.i:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
@@ -339,6 +356,7 @@ orb_utils.s: orb_utils.cpp.s
 # target to generate assembly for a file
 orb_utils.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
@@ -371,6 +389,33 @@ test.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/test.cpp.s
 .PHONY : test.cpp.s
 
+triangulation.o: triangulation.cpp.o
+
+.PHONY : triangulation.o
+
+# target to build an object file
+triangulation.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/triangulation.cpp.o
+.PHONY : triangulation.cpp.o
+
+triangulation.i: triangulation.cpp.i
+
+.PHONY : triangulation.i
+
+# target to preprocess a source file
+triangulation.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/triangulation.cpp.i
+.PHONY : triangulation.cpp.i
+
+triangulation.s: triangulation.cpp.s
+
+.PHONY : triangulation.s
+
+# target to generate assembly for a file
+triangulation.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/triangulation.cpp.s
+.PHONY : triangulation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -382,6 +427,7 @@ help:
 	@echo "... orb_cv"
 	@echo "... edit_cache"
 	@echo "... orb_self"
+	@echo "... triangulation"
 	@echo "... 2d2d"
 	@echo "... orb_test"
 	@echo "... test1"
@@ -403,6 +449,9 @@ help:
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... triangulation.o"
+	@echo "... triangulation.i"
+	@echo "... triangulation.s"
 .PHONY : help
 
 

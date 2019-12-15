@@ -5,8 +5,13 @@ find_package(OpenCV REQUIRED)
 message(STATUS "OpenCV FOUND: ${OpenCV_INCLUDE_DIRS}")
 message(STATUS "OpenCV LIBS: ${OpenCV_LIBS}")
 
+find_package(Pangolin REQUIRED)
+message(STATUS "Pangolin FOUND: ${Pangolin_INCLUDE_DIRS}")
+message(STATUS "Pangolin libs: ${Pangolin_LIBRARIES}")
+
 include_directories(
     ${OpenCV_INCLUDE_DIRS}
+    ${Pangolin_INCLUDE_DIRS}
 )
 
 add_executable(orb_cv orb_cv.cpp)
@@ -32,6 +37,12 @@ target_link_libraries(test1
 add_executable(2d2d 2d2d.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(2d2d
     ${OpenCV_LIBS}
+)
+
+add_executable(triangulation triangulation orb_utils.hpp orb_utils.cpp)
+target_link_libraries(triangulation
+    ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 # .so

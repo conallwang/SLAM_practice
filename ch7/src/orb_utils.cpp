@@ -266,6 +266,14 @@ int ORB_pattern[256 * 4] = {
   -1, -6, 0, -11/*mean (0.127148), correlation (0.547401)*/
 };
 
+// pixel2camera
+cv::Point2f pixel2camera(Point p, cv::Mat K) {
+    return cv::Point2f(
+        (p.first - K.at<double>(0, 2)) / K.at<double>(0, 0),
+        (p.second - K.at<double>(1, 2)) / K.at<double>(1, 1)
+    );
+}
+
 // contraint point x~[0, rows-1] y~[0, cols-1]
 void Constraint(Point& p, int rows, int cols) {
     if (p.first < 0) p.first = 0;
@@ -564,4 +572,42 @@ void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints
     cout << "\n[INFO] R: \n" << R << endl;
     cout << "[INFO] t: \n" << t << endl;
 
+}
+
+// triangular measurement
+void Triangulation(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat R, cv::Mat t, vector<cv::Point3d>& points) {
+    // Translation Matrix of camera 1
+    cv::Mat T1 = (cv::Mat_<float>(3, 4) << 1, 0, 0, 0,
+                                            0, 1, 0, 0,
+                                            0, 0, 1, 0);
+    // Translation Matrix of camera 2
+    cv::Mat T2 = (cv::Mat_<float>(3, 4) << R.at<double>(0, 0), R.at<double>(0, 1), R.at<double>(0, 2), t.at<double>(0, 0),
+                                            R.at<double>(1, 0), R.at<double>(1, 1), R.at<double>(1, 2), t.at<double>(1, 0),
+                                            R.at<double>(2, 0), R.at<double>(2, 1), R.at<double>(2, 2), t.at<double>(2, 0));
+
+    // camera calib
+    cv::Mat K = (cv::Mat_<double>(3, 3) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1);
+
+    vector<cv::Point2f> points_1, points_2;
+    for (cv::DMatch m: matches) {
+        points_1.push_back(pixel2camera(keypoints_1[m.queryIdx].GetPt(), K));
+        points_2.push_back(pixel2camera(keypoints_2[m.trainIdx].GetPt(), K));
+    }
+
+    cv::Mat point4d;
+    cv::triangulatePoints(T1, T2, points_1, points_2, point4d);
+
+    cout << "\n[INFO] point4d: \n" << point4d << endl;
+
+    // Convert to vector<Point3d>
+    for (int i=0;i<point4d.cols;i++) {
+        cv::Mat x = point4d.col(i);
+        x /= x.at<float>(3, 0);
+        cv::Point3d point(
+            x.at<float>(0, 0),
+            x.at<float>(1, 0),
+            x.at<float>(2, 0)
+        );
+        points.push_back(point);
+    }
 }

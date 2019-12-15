@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch7/build
 bin/all: bin/CMakeFiles/orb_utils.dir/all
 bin/all: bin/CMakeFiles/orb_cv.dir/all
 bin/all: bin/CMakeFiles/orb_self.dir/all
+bin/all: bin/CMakeFiles/triangulation.dir/all
 bin/all: bin/CMakeFiles/2d2d.dir/all
 bin/all: bin/CMakeFiles/orb_test.dir/all
 bin/all: bin/CMakeFiles/test1.dir/all
@@ -76,6 +77,7 @@ bin/all: bin/CMakeFiles/test1.dir/all
 bin/clean: bin/CMakeFiles/orb_utils.dir/clean
 bin/clean: bin/CMakeFiles/orb_cv.dir/clean
 bin/clean: bin/CMakeFiles/orb_self.dir/clean
+bin/clean: bin/CMakeFiles/triangulation.dir/clean
 bin/clean: bin/CMakeFiles/2d2d.dir/clean
 bin/clean: bin/CMakeFiles/orb_test.dir/clean
 bin/clean: bin/CMakeFiles/test1.dir/clean
@@ -195,6 +197,43 @@ bin/CMakeFiles/orb_self.dir/clean:
 
 # clean rule for target.
 clean: bin/CMakeFiles/orb_self.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/triangulation.dir
+
+# All Build rule for target.
+bin/CMakeFiles/triangulation.dir/all:
+	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/depend
+	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=16,17,18 "Built target triangulation"
+.PHONY : bin/CMakeFiles/triangulation.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/triangulation.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/triangulation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/triangulation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/triangulation.dir/rule
+
+# Convenience name for target.
+triangulation: bin/CMakeFiles/triangulation.dir/rule
+
+.PHONY : triangulation
+
+# clean rule for target.
+bin/CMakeFiles/triangulation.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/clean
+.PHONY : bin/CMakeFiles/triangulation.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/triangulation.dir/clean
 
 .PHONY : clean
 

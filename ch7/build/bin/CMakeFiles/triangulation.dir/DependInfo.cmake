@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/johnson/SLAM/ch7/src/orb_self.cpp" "/home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_self.dir/orb_self.cpp.o"
+  "/home/johnson/SLAM/ch7/src/orb_utils.cpp" "/home/johnson/SLAM/ch7/build/bin/CMakeFiles/triangulation.dir/orb_utils.cpp.o"
+  "/home/johnson/SLAM/ch7/src/triangulation.cpp" "/home/johnson/SLAM/ch7/build/bin/CMakeFiles/triangulation.dir/triangulation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

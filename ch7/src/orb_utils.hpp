@@ -106,4 +106,7 @@ void ShowMatch(string gragh_name, cv::Mat image_1, vector<mKeyPoint> keypoints_1
 // Compute essential matrix and fundamental matrix
 void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat& R, cv::Mat& t);
 
+// trianglar measurement
+void Triangulation(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat R, cv::Mat t, vector<cv::Point3d>& points);
+
 #endif

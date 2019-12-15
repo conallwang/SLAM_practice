@@ -5,6 +5,7 @@
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_cv.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/edit_cache.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_self.dir
+/home/johnson/SLAM/ch7/build/bin/CMakeFiles/triangulation.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/2d2d.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_test.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/test1.dir

@@ -150,6 +150,19 @@ orb_self/fast:
 .PHONY : orb_self/fast
 
 #=============================================================================
+# Target rules for targets named triangulation
+
+# Build rule for target.
+triangulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 triangulation
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
+
+#=============================================================================
 # Target rules for targets named 2d2d
 
 # Build rule for target.
@@ -199,6 +212,7 @@ help:
 	@echo "... orb_utils"
 	@echo "... orb_cv"
 	@echo "... orb_self"
+	@echo "... triangulation"
 	@echo "... 2d2d"
 	@echo "... orb_test"
 	@echo "... test1"
