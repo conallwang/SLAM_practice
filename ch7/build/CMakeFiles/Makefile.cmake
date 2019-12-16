@@ -59,5 +59,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "bin/CMakeFiles/triangulation.dir/DependInfo.cmake"
   "bin/CMakeFiles/2d2d.dir/DependInfo.cmake"
   "bin/CMakeFiles/orb_test.dir/DependInfo.cmake"
+  "bin/CMakeFiles/opencv_PnP.dir/DependInfo.cmake"
   "bin/CMakeFiles/test1.dir/DependInfo.cmake"
   )

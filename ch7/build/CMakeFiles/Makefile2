@@ -69,6 +69,7 @@ bin/all: bin/CMakeFiles/orb_self.dir/all
 bin/all: bin/CMakeFiles/triangulation.dir/all
 bin/all: bin/CMakeFiles/2d2d.dir/all
 bin/all: bin/CMakeFiles/orb_test.dir/all
+bin/all: bin/CMakeFiles/opencv_PnP.dir/all
 bin/all: bin/CMakeFiles/test1.dir/all
 
 .PHONY : bin/all
@@ -80,6 +81,7 @@ bin/clean: bin/CMakeFiles/orb_self.dir/clean
 bin/clean: bin/CMakeFiles/triangulation.dir/clean
 bin/clean: bin/CMakeFiles/2d2d.dir/clean
 bin/clean: bin/CMakeFiles/orb_test.dir/clean
+bin/clean: bin/CMakeFiles/opencv_PnP.dir/clean
 bin/clean: bin/CMakeFiles/test1.dir/clean
 
 .PHONY : bin/clean
@@ -96,7 +98,7 @@ bin/preinstall:
 bin/CMakeFiles/orb_utils.dir/all:
 	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/depend
 	$(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=11,12 "Built target orb_utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=14,15 "Built target orb_utils"
 .PHONY : bin/CMakeFiles/orb_utils.dir/all
 
 # Include target in all.
@@ -133,7 +135,7 @@ clean: bin/CMakeFiles/orb_utils.dir/clean
 bin/CMakeFiles/orb_cv.dir/all:
 	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/depend
 	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=4,5 "Built target orb_cv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=7,8 "Built target orb_cv"
 .PHONY : bin/CMakeFiles/orb_cv.dir/all
 
 # Include target in all.
@@ -170,7 +172,7 @@ clean: bin/CMakeFiles/orb_cv.dir/clean
 bin/CMakeFiles/orb_self.dir/all:
 	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/depend
 	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=6,7 "Built target orb_self"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=9,10 "Built target orb_self"
 .PHONY : bin/CMakeFiles/orb_self.dir/all
 
 # Include target in all.
@@ -207,7 +209,7 @@ clean: bin/CMakeFiles/orb_self.dir/clean
 bin/CMakeFiles/triangulation.dir/all:
 	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/depend
 	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=16,17,18 "Built target triangulation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=19,20,21 "Built target triangulation"
 .PHONY : bin/CMakeFiles/triangulation.dir/all
 
 # Include target in all.
@@ -281,7 +283,7 @@ clean: bin/CMakeFiles/2d2d.dir/clean
 bin/CMakeFiles/orb_test.dir/all:
 	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/depend
 	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=8,9,10 "Built target orb_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=11,12,13 "Built target orb_test"
 .PHONY : bin/CMakeFiles/orb_test.dir/all
 
 # Include target in all.
@@ -312,13 +314,50 @@ clean: bin/CMakeFiles/orb_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target bin/CMakeFiles/opencv_PnP.dir
+
+# All Build rule for target.
+bin/CMakeFiles/opencv_PnP.dir/all:
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/depend
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=4,5,6 "Built target opencv_PnP"
+.PHONY : bin/CMakeFiles/opencv_PnP.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/opencv_PnP.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/opencv_PnP.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_PnP.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch7/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/opencv_PnP.dir/rule
+
+# Convenience name for target.
+opencv_PnP: bin/CMakeFiles/opencv_PnP.dir/rule
+
+.PHONY : opencv_PnP
+
+# clean rule for target.
+bin/CMakeFiles/opencv_PnP.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/clean
+.PHONY : bin/CMakeFiles/opencv_PnP.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/opencv_PnP.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target bin/CMakeFiles/test1.dir
 
 # All Build rule for target.
 bin/CMakeFiles/test1.dir/all:
 	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/depend
 	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=13,14,15 "Built target test1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=16,17,18 "Built target test1"
 .PHONY : bin/CMakeFiles/test1.dir/all
 
 # Include target in all.

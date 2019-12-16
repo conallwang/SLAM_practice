@@ -189,6 +189,19 @@ orb_test/fast:
 .PHONY : orb_test/fast
 
 #=============================================================================
+# Target rules for targets named opencv_PnP
+
+# Build rule for target.
+opencv_PnP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_PnP
+.PHONY : opencv_PnP
+
+# fast build rule for target.
+opencv_PnP/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/build
+.PHONY : opencv_PnP/fast
+
+#=============================================================================
 # Target rules for targets named test1
 
 # Build rule for target.
@@ -215,6 +228,7 @@ help:
 	@echo "... triangulation"
 	@echo "... 2d2d"
 	@echo "... orb_test"
+	@echo "... opencv_PnP"
 	@echo "... test1"
 .PHONY : help
 

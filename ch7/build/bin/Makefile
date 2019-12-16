@@ -201,6 +201,21 @@ orb_test/fast:
 .PHONY : orb_test/fast
 
 # Convenience name for target.
+bin/CMakeFiles/opencv_PnP.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_PnP.dir/rule
+.PHONY : bin/CMakeFiles/opencv_PnP.dir/rule
+
+# Convenience name for target.
+opencv_PnP: bin/CMakeFiles/opencv_PnP.dir/rule
+
+.PHONY : opencv_PnP
+
+# fast build rule for target.
+opencv_PnP/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/build
+.PHONY : opencv_PnP/fast
+
+# Convenience name for target.
 bin/CMakeFiles/test1.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/rule
 .PHONY : bin/CMakeFiles/test1.dir/rule
@@ -241,6 +256,33 @@ test1/fast:
 2d2d.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/2d2d.cpp.s
 .PHONY : 2d2d.cpp.s
+
+opencv_PnP.o: opencv_PnP.cpp.o
+
+.PHONY : opencv_PnP.o
+
+# target to build an object file
+opencv_PnP.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/opencv_PnP.cpp.o
+.PHONY : opencv_PnP.cpp.o
+
+opencv_PnP.i: opencv_PnP.cpp.i
+
+.PHONY : opencv_PnP.i
+
+# target to preprocess a source file
+opencv_PnP.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/opencv_PnP.cpp.i
+.PHONY : opencv_PnP.cpp.i
+
+opencv_PnP.s: opencv_PnP.cpp.s
+
+.PHONY : opencv_PnP.s
+
+# target to generate assembly for a file
+opencv_PnP.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/opencv_PnP.cpp.s
+.PHONY : opencv_PnP.cpp.s
 
 orb_cv.o: orb_cv.cpp.o
 
@@ -333,6 +375,7 @@ orb_utils.cpp.o:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
 .PHONY : orb_utils.cpp.o
 
@@ -346,6 +389,7 @@ orb_utils.cpp.i:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
 .PHONY : orb_utils.cpp.i
 
@@ -359,6 +403,7 @@ orb_utils.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
 .PHONY : orb_utils.cpp.s
 
@@ -430,10 +475,14 @@ help:
 	@echo "... triangulation"
 	@echo "... 2d2d"
 	@echo "... orb_test"
+	@echo "... opencv_PnP"
 	@echo "... test1"
 	@echo "... 2d2d.o"
 	@echo "... 2d2d.i"
 	@echo "... 2d2d.s"
+	@echo "... opencv_PnP.o"
+	@echo "... opencv_PnP.i"
+	@echo "... opencv_PnP.s"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"

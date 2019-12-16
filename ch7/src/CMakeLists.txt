@@ -45,5 +45,10 @@ target_link_libraries(triangulation
     ${Pangolin_LIBRARIES}
 )
 
+add_executable(opencv_PnP opencv_PnP.cpp orb_utils.hpp orb_utils.cpp)
+target_link_libraries(opencv_PnP
+    ${OpenCV_LIBS}
+)
+
 # .so
 add_library(orb_utils SHARED orb_utils.hpp orb_utils.cpp)

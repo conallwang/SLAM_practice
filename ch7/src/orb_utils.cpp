@@ -544,10 +544,9 @@ void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints
     vector<cv::Point2f> points_1;
     vector<cv::Point2f> points_2;
 
-    int m_size = matches.size();
-    for (int i=0;i<m_size;i++) {
-        points_1.push_back(cv::Point2f(keypoints_1[i].GetPt().first, keypoints_1[i].GetPt().second));
-        points_2.push_back(cv::Point2f(keypoints_2[i].GetPt().first, keypoints_2[i].GetPt().second));
+    for (cv::DMatch m: matches) {
+        points_1.push_back(cv::Point2f(keypoints_1[m.queryIdx].GetPt().first, keypoints_1[m.queryIdx].GetPt().second));
+        points_2.push_back(cv::Point2f(keypoints_2[m.trainIdx].GetPt().first, keypoints_2[m.trainIdx].GetPt().second));
     }
 
     // Compute Fundamental Matrix
