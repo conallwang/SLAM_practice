@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch7/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -126,79 +126,19 @@ orb_utils/fast:
 .PHONY : orb_utils/fast
 
 # Convenience name for target.
-bin/CMakeFiles/orb_cv.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_cv.dir/rule
-.PHONY : bin/CMakeFiles/orb_cv.dir/rule
+bin/CMakeFiles/test1.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/rule
+.PHONY : bin/CMakeFiles/test1.dir/rule
 
 # Convenience name for target.
-orb_cv: bin/CMakeFiles/orb_cv.dir/rule
+test1: bin/CMakeFiles/test1.dir/rule
 
-.PHONY : orb_cv
+.PHONY : test1
 
 # fast build rule for target.
-orb_cv/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
-.PHONY : orb_cv/fast
-
-# Convenience name for target.
-bin/CMakeFiles/orb_self.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_self.dir/rule
-.PHONY : bin/CMakeFiles/orb_self.dir/rule
-
-# Convenience name for target.
-orb_self: bin/CMakeFiles/orb_self.dir/rule
-
-.PHONY : orb_self
-
-# fast build rule for target.
-orb_self/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
-.PHONY : orb_self/fast
-
-# Convenience name for target.
-bin/CMakeFiles/triangulation.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/triangulation.dir/rule
-.PHONY : bin/CMakeFiles/triangulation.dir/rule
-
-# Convenience name for target.
-triangulation: bin/CMakeFiles/triangulation.dir/rule
-
-.PHONY : triangulation
-
-# fast build rule for target.
-triangulation/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
-.PHONY : triangulation/fast
-
-# Convenience name for target.
-bin/CMakeFiles/2d2d.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/2d2d.dir/rule
-.PHONY : bin/CMakeFiles/2d2d.dir/rule
-
-# Convenience name for target.
-2d2d: bin/CMakeFiles/2d2d.dir/rule
-
-.PHONY : 2d2d
-
-# fast build rule for target.
-2d2d/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
-.PHONY : 2d2d/fast
-
-# Convenience name for target.
-bin/CMakeFiles/orb_test.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_test.dir/rule
-.PHONY : bin/CMakeFiles/orb_test.dir/rule
-
-# Convenience name for target.
-orb_test: bin/CMakeFiles/orb_test.dir/rule
-
-.PHONY : orb_test
-
-# fast build rule for target.
-orb_test/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
-.PHONY : orb_test/fast
+test1/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
+.PHONY : test1/fast
 
 # Convenience name for target.
 bin/CMakeFiles/opencv_PnP.dir/rule:
@@ -216,19 +156,124 @@ opencv_PnP/fast:
 .PHONY : opencv_PnP/fast
 
 # Convenience name for target.
-bin/CMakeFiles/test1.dir/rule:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/rule
-.PHONY : bin/CMakeFiles/test1.dir/rule
+bin/CMakeFiles/orb_test.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_test.dir/rule
+.PHONY : bin/CMakeFiles/orb_test.dir/rule
 
 # Convenience name for target.
-test1: bin/CMakeFiles/test1.dir/rule
+orb_test: bin/CMakeFiles/orb_test.dir/rule
 
-.PHONY : test1
+.PHONY : orb_test
 
 # fast build rule for target.
-test1/fast:
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+orb_test/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
+.PHONY : orb_test/fast
+
+# Convenience name for target.
+bin/CMakeFiles/2d2d.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/2d2d.dir/rule
+.PHONY : bin/CMakeFiles/2d2d.dir/rule
+
+# Convenience name for target.
+2d2d: bin/CMakeFiles/2d2d.dir/rule
+
+.PHONY : 2d2d
+
+# fast build rule for target.
+2d2d/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
+.PHONY : 2d2d/fast
+
+# Convenience name for target.
+bin/CMakeFiles/triangulation.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/triangulation.dir/rule
+.PHONY : bin/CMakeFiles/triangulation.dir/rule
+
+# Convenience name for target.
+triangulation: bin/CMakeFiles/triangulation.dir/rule
+
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
+
+# Convenience name for target.
+bin/CMakeFiles/orb_self.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_self.dir/rule
+.PHONY : bin/CMakeFiles/orb_self.dir/rule
+
+# Convenience name for target.
+orb_self: bin/CMakeFiles/orb_self.dir/rule
+
+.PHONY : orb_self
+
+# fast build rule for target.
+orb_self/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
+.PHONY : orb_self/fast
+
+# Convenience name for target.
+bin/CMakeFiles/orb_cv.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/orb_cv.dir/rule
+.PHONY : bin/CMakeFiles/orb_cv.dir/rule
+
+# Convenience name for target.
+orb_cv: bin/CMakeFiles/orb_cv.dir/rule
+
+.PHONY : orb_cv
+
+# fast build rule for target.
+orb_cv/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
+.PHONY : orb_cv/fast
+
+# Convenience name for target.
+bin/CMakeFiles/opencv_PnP_c.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/opencv_PnP_c.dir/rule
+.PHONY : bin/CMakeFiles/opencv_PnP_c.dir/rule
+
+# Convenience name for target.
+opencv_PnP_c: bin/CMakeFiles/opencv_PnP_c.dir/rule
+
+.PHONY : opencv_PnP_c
+
+# fast build rule for target.
+opencv_PnP_c/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP_c.dir/build.make bin/CMakeFiles/opencv_PnP_c.dir/build
+.PHONY : opencv_PnP_c/fast
+
+# Convenience name for target.
+bin/CMakeFiles/BAG2O.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/BAG2O.dir/rule
+.PHONY : bin/CMakeFiles/BAG2O.dir/rule
+
+# Convenience name for target.
+BAG2O: bin/CMakeFiles/BAG2O.dir/rule
+
+.PHONY : BAG2O
+
+# fast build rule for target.
+BAG2O/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/build
+.PHONY : BAG2O/fast
+
+# Convenience name for target.
+bin/CMakeFiles/BAGaussionNewton.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/BAGaussionNewton.dir/rule
+.PHONY : bin/CMakeFiles/BAGaussionNewton.dir/rule
+
+# Convenience name for target.
+BAGaussionNewton: bin/CMakeFiles/BAGaussionNewton.dir/rule
+
+.PHONY : BAGaussionNewton
+
+# fast build rule for target.
+BAGaussionNewton/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/build
+.PHONY : BAGaussionNewton/fast
 
 2d2d.o: 2d2d.cpp.o
 
@@ -257,6 +302,60 @@ test1/fast:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/2d2d.cpp.s
 .PHONY : 2d2d.cpp.s
 
+BAG2O.o: BAG2O.cpp.o
+
+.PHONY : BAG2O.o
+
+# target to build an object file
+BAG2O.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/BAG2O.cpp.o
+.PHONY : BAG2O.cpp.o
+
+BAG2O.i: BAG2O.cpp.i
+
+.PHONY : BAG2O.i
+
+# target to preprocess a source file
+BAG2O.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/BAG2O.cpp.i
+.PHONY : BAG2O.cpp.i
+
+BAG2O.s: BAG2O.cpp.s
+
+.PHONY : BAG2O.s
+
+# target to generate assembly for a file
+BAG2O.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/BAG2O.cpp.s
+.PHONY : BAG2O.cpp.s
+
+BAGaussionNewton.o: BAGaussionNewton.cpp.o
+
+.PHONY : BAGaussionNewton.o
+
+# target to build an object file
+BAGaussionNewton.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/BAGaussionNewton.cpp.o
+.PHONY : BAGaussionNewton.cpp.o
+
+BAGaussionNewton.i: BAGaussionNewton.cpp.i
+
+.PHONY : BAGaussionNewton.i
+
+# target to preprocess a source file
+BAGaussionNewton.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/BAGaussionNewton.cpp.i
+.PHONY : BAGaussionNewton.cpp.i
+
+BAGaussionNewton.s: BAGaussionNewton.cpp.s
+
+.PHONY : BAGaussionNewton.s
+
+# target to generate assembly for a file
+BAGaussionNewton.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/BAGaussionNewton.cpp.s
+.PHONY : BAGaussionNewton.cpp.s
+
 opencv_PnP.o: opencv_PnP.cpp.o
 
 .PHONY : opencv_PnP.o
@@ -283,6 +382,33 @@ opencv_PnP.s: opencv_PnP.cpp.s
 opencv_PnP.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/opencv_PnP.cpp.s
 .PHONY : opencv_PnP.cpp.s
+
+opencv_PnP_c.o: opencv_PnP_c.cpp.o
+
+.PHONY : opencv_PnP_c.o
+
+# target to build an object file
+opencv_PnP_c.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP_c.dir/build.make bin/CMakeFiles/opencv_PnP_c.dir/opencv_PnP_c.cpp.o
+.PHONY : opencv_PnP_c.cpp.o
+
+opencv_PnP_c.i: opencv_PnP_c.cpp.i
+
+.PHONY : opencv_PnP_c.i
+
+# target to preprocess a source file
+opencv_PnP_c.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP_c.dir/build.make bin/CMakeFiles/opencv_PnP_c.dir/opencv_PnP_c.cpp.i
+.PHONY : opencv_PnP_c.cpp.i
+
+opencv_PnP_c.s: opencv_PnP_c.cpp.s
+
+.PHONY : opencv_PnP_c.s
+
+# target to generate assembly for a file
+opencv_PnP_c.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP_c.dir/build.make bin/CMakeFiles/opencv_PnP_c.dir/opencv_PnP_c.cpp.s
+.PHONY : opencv_PnP_c.cpp.s
 
 orb_cv.o: orb_cv.cpp.o
 
@@ -372,11 +498,13 @@ orb_utils.o: orb_utils.cpp.o
 # target to build an object file
 orb_utils.cpp.o:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.o
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.o
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.o
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/orb_utils.cpp.o
 .PHONY : orb_utils.cpp.o
 
 orb_utils.i: orb_utils.cpp.i
@@ -386,11 +514,13 @@ orb_utils.i: orb_utils.cpp.i
 # target to preprocess a source file
 orb_utils.cpp.i:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.i
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.i
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.i
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/orb_utils.cpp.i
 .PHONY : orb_utils.cpp.i
 
 orb_utils.s: orb_utils.cpp.s
@@ -400,11 +530,13 @@ orb_utils.s: orb_utils.cpp.s
 # target to generate assembly for a file
 orb_utils.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.s
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.s
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.s
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
-	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/orb_utils.cpp.s
 .PHONY : orb_utils.cpp.s
 
 test.o: test.cpp.o
@@ -467,22 +599,34 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_utils"
-	@echo "... orb_cv"
-	@echo "... edit_cache"
-	@echo "... orb_self"
-	@echo "... triangulation"
-	@echo "... 2d2d"
-	@echo "... orb_test"
-	@echo "... opencv_PnP"
 	@echo "... test1"
+	@echo "... opencv_PnP"
+	@echo "... orb_test"
+	@echo "... 2d2d"
+	@echo "... triangulation"
+	@echo "... orb_self"
+	@echo "... orb_cv"
+	@echo "... opencv_PnP_c"
+	@echo "... BAG2O"
+	@echo "... BAGaussionNewton"
 	@echo "... 2d2d.o"
 	@echo "... 2d2d.i"
 	@echo "... 2d2d.s"
+	@echo "... BAG2O.o"
+	@echo "... BAG2O.i"
+	@echo "... BAG2O.s"
+	@echo "... BAGaussionNewton.o"
+	@echo "... BAGaussionNewton.i"
+	@echo "... BAGaussionNewton.s"
 	@echo "... opencv_PnP.o"
 	@echo "... opencv_PnP.i"
 	@echo "... opencv_PnP.s"
+	@echo "... opencv_PnP_c.o"
+	@echo "... opencv_PnP_c.i"
+	@echo "... opencv_PnP_c.s"
 	@echo "... orb_cv.o"
 	@echo "... orb_cv.i"
 	@echo "... orb_cv.s"

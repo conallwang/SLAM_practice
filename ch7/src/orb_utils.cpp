@@ -490,7 +490,7 @@ void Match(vector<Descriptor> descriptors_1, vector<Descriptor> descriptors_2, v
             matches.push_back(match);
     }
 
-    printf("[INFO] Match Points: %d", (int)matches.size());
+    printf("[INFO] Match Points: %d\n", (int)matches.size());
 }
 
 // Show Match

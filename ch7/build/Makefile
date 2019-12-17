@@ -124,69 +124,17 @@ orb_utils/fast:
 .PHONY : orb_utils/fast
 
 #=============================================================================
-# Target rules for targets named orb_cv
+# Target rules for targets named test1
 
 # Build rule for target.
-orb_cv: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 orb_cv
-.PHONY : orb_cv
+test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
 
 # fast build rule for target.
-orb_cv/fast:
-	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
-.PHONY : orb_cv/fast
-
-#=============================================================================
-# Target rules for targets named orb_self
-
-# Build rule for target.
-orb_self: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 orb_self
-.PHONY : orb_self
-
-# fast build rule for target.
-orb_self/fast:
-	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
-.PHONY : orb_self/fast
-
-#=============================================================================
-# Target rules for targets named triangulation
-
-# Build rule for target.
-triangulation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 triangulation
-.PHONY : triangulation
-
-# fast build rule for target.
-triangulation/fast:
-	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
-.PHONY : triangulation/fast
-
-#=============================================================================
-# Target rules for targets named 2d2d
-
-# Build rule for target.
-2d2d: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 2d2d
-.PHONY : 2d2d
-
-# fast build rule for target.
-2d2d/fast:
-	$(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
-.PHONY : 2d2d/fast
-
-#=============================================================================
-# Target rules for targets named orb_test
-
-# Build rule for target.
-orb_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 orb_test
-.PHONY : orb_test
-
-# fast build rule for target.
-orb_test/fast:
-	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
-.PHONY : orb_test/fast
+test1/fast:
+	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
+.PHONY : test1/fast
 
 #=============================================================================
 # Target rules for targets named opencv_PnP
@@ -202,17 +150,108 @@ opencv_PnP/fast:
 .PHONY : opencv_PnP/fast
 
 #=============================================================================
-# Target rules for targets named test1
+# Target rules for targets named orb_test
 
 # Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
+orb_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_test
+.PHONY : orb_test
 
 # fast build rule for target.
-test1/fast:
-	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+orb_test/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
+.PHONY : orb_test/fast
+
+#=============================================================================
+# Target rules for targets named 2d2d
+
+# Build rule for target.
+2d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2d2d
+.PHONY : 2d2d
+
+# fast build rule for target.
+2d2d/fast:
+	$(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
+.PHONY : 2d2d/fast
+
+#=============================================================================
+# Target rules for targets named triangulation
+
+# Build rule for target.
+triangulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 triangulation
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	$(MAKE) -f bin/CMakeFiles/triangulation.dir/build.make bin/CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
+
+#=============================================================================
+# Target rules for targets named orb_self
+
+# Build rule for target.
+orb_self: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_self
+.PHONY : orb_self
+
+# fast build rule for target.
+orb_self/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_self.dir/build.make bin/CMakeFiles/orb_self.dir/build
+.PHONY : orb_self/fast
+
+#=============================================================================
+# Target rules for targets named orb_cv
+
+# Build rule for target.
+orb_cv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 orb_cv
+.PHONY : orb_cv
+
+# fast build rule for target.
+orb_cv/fast:
+	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
+.PHONY : orb_cv/fast
+
+#=============================================================================
+# Target rules for targets named opencv_PnP_c
+
+# Build rule for target.
+opencv_PnP_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_PnP_c
+.PHONY : opencv_PnP_c
+
+# fast build rule for target.
+opencv_PnP_c/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP_c.dir/build.make bin/CMakeFiles/opencv_PnP_c.dir/build
+.PHONY : opencv_PnP_c/fast
+
+#=============================================================================
+# Target rules for targets named BAG2O
+
+# Build rule for target.
+BAG2O: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BAG2O
+.PHONY : BAG2O
+
+# fast build rule for target.
+BAG2O/fast:
+	$(MAKE) -f bin/CMakeFiles/BAG2O.dir/build.make bin/CMakeFiles/BAG2O.dir/build
+.PHONY : BAG2O/fast
+
+#=============================================================================
+# Target rules for targets named BAGaussionNewton
+
+# Build rule for target.
+BAGaussionNewton: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BAGaussionNewton
+.PHONY : BAGaussionNewton
+
+# fast build rule for target.
+BAGaussionNewton/fast:
+	$(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/build
+.PHONY : BAGaussionNewton/fast
 
 # Help Target
 help:
@@ -223,13 +262,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_utils"
-	@echo "... orb_cv"
-	@echo "... orb_self"
-	@echo "... triangulation"
-	@echo "... 2d2d"
-	@echo "... orb_test"
-	@echo "... opencv_PnP"
 	@echo "... test1"
+	@echo "... opencv_PnP"
+	@echo "... orb_test"
+	@echo "... 2d2d"
+	@echo "... triangulation"
+	@echo "... orb_self"
+	@echo "... orb_cv"
+	@echo "... opencv_PnP_c"
+	@echo "... BAG2O"
+	@echo "... BAGaussionNewton"
 .PHONY : help
 
 

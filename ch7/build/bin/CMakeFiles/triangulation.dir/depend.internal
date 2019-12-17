@@ -345,7 +345,6 @@ bin/CMakeFiles/triangulation.dir/triangulation.cpp.o
  /usr/include/eigen3/Eigen/SVD
  /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
  /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
- /usr/include/eigen3/Eigen/src/Cholesky/LLT_MKL.h
  /usr/include/eigen3/Eigen/src/Core/Array.h
  /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
  /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
@@ -400,7 +399,6 @@ bin/CMakeFiles/triangulation.dir/triangulation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/Solve.h
  /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
  /usr/include/eigen3/Eigen/src/Core/SolverBase.h
- /usr/include/eigen3/Eigen/src/Core/SpecialFunctions.h
  /usr/include/eigen3/Eigen/src/Core/StableNorm.h
  /usr/include/eigen3/Eigen/src/Core/Stride.h
  /usr/include/eigen3/Eigen/src/Core/Swap.h
@@ -435,23 +433,15 @@ bin/CMakeFiles/triangulation.dir/triangulation.cpp.o
  /usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
- /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_MKL.h
- /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h
- /usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h
  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
- /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h
- /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h
  /usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h
  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h
- /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h
- /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h
- /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix_MKL.h
  /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h
  /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h
  /usr/include/eigen3/Eigen/src/Core/util/Constants.h
@@ -487,16 +477,12 @@ bin/CMakeFiles/triangulation.dir/triangulation.cpp.o
  /usr/include/eigen3/Eigen/src/LU/FullPivLU.h
  /usr/include/eigen3/Eigen/src/LU/InverseImpl.h
  /usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
- /usr/include/eigen3/Eigen/src/LU/PartialPivLU_MKL.h
  /usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
  /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h
- /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR_MKL.h
  /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
  /usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
- /usr/include/eigen3/Eigen/src/QR/HouseholderQR_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
  /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
- /usr/include/eigen3/Eigen/src/SVD/JacobiSVD_MKL.h
  /usr/include/eigen3/Eigen/src/SVD/SVDBase.h
  /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
  /usr/include/eigen3/Eigen/src/misc/Image.h

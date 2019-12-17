@@ -37,6 +37,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // Show depth
+    // cout << "[INFO] DEPTH_IMAGE: \n" << depth_1 << endl;
+
     printf("\n[STATUS] Starting Feature Extract ... \n");
     vector<mKeyPoint> keypoints_1, keypoints_2;
     if (!FeatureExtract(image_1, keypoints_1)) return 1;
@@ -54,17 +57,18 @@ int main(int argc, char* argv[]) {
     // Compute 3D position according to depth_1
     cv::Mat K = (cv::Mat_<double>(3, 3) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1);
 
-    vector<cv::Point3d> points3d;
-    vector<cv::Point2d> points2d;
+    vector<cv::Point3f> points3d;
+    vector<cv::Point2f> points2d;
     for (cv::DMatch m: matches) {
-        cv::Point3d point3d;
-        cv::Point2d point2d;
-        point3d.z = depth_1.at<unsigned short>(keypoints_1[m.queryIdx].GetPt().second, keypoints_1[m.queryIdx].GetPt().first);
-        if (point3d.z == 0)
+        cv::Point3f point3d;
+        cv::Point2f point2d;
+        ushort d = depth_1.ptr<unsigned short>((int)keypoints_1[m.queryIdx].GetPt().second)[(int)keypoints_1[m.queryIdx].GetPt().first];
+        if (d == 0)
             continue;
-        point3d.z = point3d.z / 5000.0;
-        point3d.x = (keypoints_1[m.queryIdx].GetPt().first - K.at<double>(0, 2)) / K.at<double>(0, 0) * point3d.z;
-        point3d.y = (keypoints_1[m.queryIdx].GetPt().second - K.at<double>(1, 1)) / K.at<double>(1, 2) * point3d.z;
+        float dd = d / 5000.0;
+        point3d.x = ((keypoints_1[m.queryIdx].GetPt().first - K.at<double>(0, 2)) / K.at<double>(0, 0)) * dd;
+        point3d.y = ((keypoints_1[m.queryIdx].GetPt().second - K.at<double>(1, 2)) / K.at<double>(1, 1)) * dd;
+        point3d.z = dd;
         point2d.x = keypoints_2[m.trainIdx].GetPt().first;
         point2d.y = keypoints_2[m.trainIdx].GetPt().second;
         cout << point3d << endl;
@@ -72,6 +76,9 @@ int main(int argc, char* argv[]) {
         points3d.push_back(point3d);
         points2d.push_back(point2d);
     }
+
+    cout << "[INFO] 3d-2d pairs: " << points3d.size() << endl;
+
     // Compute R, t using opencv PnP
     cv::Mat r, t;
     cv::solvePnP(points3d, points2d, K, cv::Mat(), r, t, false);
