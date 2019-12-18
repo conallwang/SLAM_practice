@@ -56,6 +56,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "bin/CMakeFiles/orb_utils.dir/DependInfo.cmake"
+  "bin/CMakeFiles/icp_gaussion.dir/DependInfo.cmake"
+  "bin/CMakeFiles/icp_svd.dir/DependInfo.cmake"
   "bin/CMakeFiles/test1.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_PnP.dir/DependInfo.cmake"
   "bin/CMakeFiles/orb_test.dir/DependInfo.cmake"
@@ -65,5 +67,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "bin/CMakeFiles/orb_cv.dir/DependInfo.cmake"
   "bin/CMakeFiles/opencv_PnP_c.dir/DependInfo.cmake"
   "bin/CMakeFiles/BAG2O.dir/DependInfo.cmake"
+  "bin/CMakeFiles/icp_g2o.dir/DependInfo.cmake"
   "bin/CMakeFiles/BAGaussionNewton.dir/DependInfo.cmake"
   )

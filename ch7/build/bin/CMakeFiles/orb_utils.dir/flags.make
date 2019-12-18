@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -mpopcnt -fPIC
 
 CXX_DEFINES = -Dorb_utils_EXPORTS
 
-CXX_INCLUDES = -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/johnson/Pangolin/include -I/home/johnson/Pangolin/build/src/include -I/usr/include/eigen3 
+CXX_INCLUDES = -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/johnson/Pangolin/include -I/home/johnson/Pangolin/build/src/include -I/usr/include/eigen3 -I/home/johnson/SLAM/ch7/src 
 

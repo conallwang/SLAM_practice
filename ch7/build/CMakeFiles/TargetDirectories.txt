@@ -3,6 +3,8 @@
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/edit_cache.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/rebuild_cache.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_utils.dir
+/home/johnson/SLAM/ch7/build/bin/CMakeFiles/icp_gaussion.dir
+/home/johnson/SLAM/ch7/build/bin/CMakeFiles/icp_svd.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/test1.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/opencv_PnP.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_test.dir
@@ -12,4 +14,5 @@
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/orb_cv.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/opencv_PnP_c.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/BAG2O.dir
+/home/johnson/SLAM/ch7/build/bin/CMakeFiles/icp_g2o.dir
 /home/johnson/SLAM/ch7/build/bin/CMakeFiles/BAGaussionNewton.dir

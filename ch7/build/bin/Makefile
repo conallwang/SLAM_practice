@@ -126,6 +126,36 @@ orb_utils/fast:
 .PHONY : orb_utils/fast
 
 # Convenience name for target.
+bin/CMakeFiles/icp_gaussion.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/icp_gaussion.dir/rule
+.PHONY : bin/CMakeFiles/icp_gaussion.dir/rule
+
+# Convenience name for target.
+icp_gaussion: bin/CMakeFiles/icp_gaussion.dir/rule
+
+.PHONY : icp_gaussion
+
+# fast build rule for target.
+icp_gaussion/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/build
+.PHONY : icp_gaussion/fast
+
+# Convenience name for target.
+bin/CMakeFiles/icp_svd.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/icp_svd.dir/rule
+.PHONY : bin/CMakeFiles/icp_svd.dir/rule
+
+# Convenience name for target.
+icp_svd: bin/CMakeFiles/icp_svd.dir/rule
+
+.PHONY : icp_svd
+
+# fast build rule for target.
+icp_svd/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/build
+.PHONY : icp_svd/fast
+
+# Convenience name for target.
 bin/CMakeFiles/test1.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/test1.dir/rule
 .PHONY : bin/CMakeFiles/test1.dir/rule
@@ -261,6 +291,21 @@ BAG2O/fast:
 .PHONY : BAG2O/fast
 
 # Convenience name for target.
+bin/CMakeFiles/icp_g2o.dir/rule:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/icp_g2o.dir/rule
+.PHONY : bin/CMakeFiles/icp_g2o.dir/rule
+
+# Convenience name for target.
+icp_g2o: bin/CMakeFiles/icp_g2o.dir/rule
+
+.PHONY : icp_g2o
+
+# fast build rule for target.
+icp_g2o/fast:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_g2o.dir/build.make bin/CMakeFiles/icp_g2o.dir/build
+.PHONY : icp_g2o/fast
+
+# Convenience name for target.
 bin/CMakeFiles/BAGaussionNewton.dir/rule:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/BAGaussionNewton.dir/rule
 .PHONY : bin/CMakeFiles/BAGaussionNewton.dir/rule
@@ -355,6 +400,87 @@ BAGaussionNewton.s: BAGaussionNewton.cpp.s
 BAGaussionNewton.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/BAGaussionNewton.cpp.s
 .PHONY : BAGaussionNewton.cpp.s
+
+icp_g2o.o: icp_g2o.cpp.o
+
+.PHONY : icp_g2o.o
+
+# target to build an object file
+icp_g2o.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_g2o.dir/build.make bin/CMakeFiles/icp_g2o.dir/icp_g2o.cpp.o
+.PHONY : icp_g2o.cpp.o
+
+icp_g2o.i: icp_g2o.cpp.i
+
+.PHONY : icp_g2o.i
+
+# target to preprocess a source file
+icp_g2o.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_g2o.dir/build.make bin/CMakeFiles/icp_g2o.dir/icp_g2o.cpp.i
+.PHONY : icp_g2o.cpp.i
+
+icp_g2o.s: icp_g2o.cpp.s
+
+.PHONY : icp_g2o.s
+
+# target to generate assembly for a file
+icp_g2o.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_g2o.dir/build.make bin/CMakeFiles/icp_g2o.dir/icp_g2o.cpp.s
+.PHONY : icp_g2o.cpp.s
+
+icp_gaussion.o: icp_gaussion.cpp.o
+
+.PHONY : icp_gaussion.o
+
+# target to build an object file
+icp_gaussion.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o
+.PHONY : icp_gaussion.cpp.o
+
+icp_gaussion.i: icp_gaussion.cpp.i
+
+.PHONY : icp_gaussion.i
+
+# target to preprocess a source file
+icp_gaussion.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.i
+.PHONY : icp_gaussion.cpp.i
+
+icp_gaussion.s: icp_gaussion.cpp.s
+
+.PHONY : icp_gaussion.s
+
+# target to generate assembly for a file
+icp_gaussion.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.s
+.PHONY : icp_gaussion.cpp.s
+
+icp_svd.o: icp_svd.cpp.o
+
+.PHONY : icp_svd.o
+
+# target to build an object file
+icp_svd.cpp.o:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/icp_svd.cpp.o
+.PHONY : icp_svd.cpp.o
+
+icp_svd.i: icp_svd.cpp.i
+
+.PHONY : icp_svd.i
+
+# target to preprocess a source file
+icp_svd.cpp.i:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/icp_svd.cpp.i
+.PHONY : icp_svd.cpp.i
+
+icp_svd.s: icp_svd.cpp.s
+
+.PHONY : icp_svd.s
+
+# target to generate assembly for a file
+icp_svd.cpp.s:
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/icp_svd.cpp.s
+.PHONY : icp_svd.cpp.s
 
 opencv_PnP.o: opencv_PnP.cpp.o
 
@@ -498,6 +624,7 @@ orb_utils.o: orb_utils.cpp.o
 # target to build an object file
 orb_utils.cpp.o:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.o
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.o
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.o
@@ -514,6 +641,7 @@ orb_utils.i: orb_utils.cpp.i
 # target to preprocess a source file
 orb_utils.cpp.i:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.i
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.i
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.i
@@ -530,6 +658,7 @@ orb_utils.s: orb_utils.cpp.s
 # target to generate assembly for a file
 orb_utils.cpp.s:
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_utils.dir/build.make bin/CMakeFiles/orb_utils.dir/orb_utils.cpp.s
+	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/orb_utils.cpp.s
 	cd /home/johnson/SLAM/ch7/build && $(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/orb_utils.cpp.s
@@ -602,6 +731,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_utils"
+	@echo "... icp_gaussion"
+	@echo "... icp_svd"
 	@echo "... test1"
 	@echo "... opencv_PnP"
 	@echo "... orb_test"
@@ -611,6 +742,7 @@ help:
 	@echo "... orb_cv"
 	@echo "... opencv_PnP_c"
 	@echo "... BAG2O"
+	@echo "... icp_g2o"
 	@echo "... BAGaussionNewton"
 	@echo "... 2d2d.o"
 	@echo "... 2d2d.i"
@@ -621,6 +753,15 @@ help:
 	@echo "... BAGaussionNewton.o"
 	@echo "... BAGaussionNewton.i"
 	@echo "... BAGaussionNewton.s"
+	@echo "... icp_g2o.o"
+	@echo "... icp_g2o.i"
+	@echo "... icp_g2o.s"
+	@echo "... icp_gaussion.o"
+	@echo "... icp_gaussion.i"
+	@echo "... icp_gaussion.s"
+	@echo "... icp_svd.o"
+	@echo "... icp_svd.i"
+	@echo "... icp_svd.s"
 	@echo "... opencv_PnP.o"
 	@echo "... opencv_PnP.i"
 	@echo "... opencv_PnP.s"

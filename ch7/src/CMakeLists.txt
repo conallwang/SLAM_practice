@@ -25,6 +25,7 @@ include_directories(
     ${Pangolin_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS}
     ${G2O_INCLUDE_DIRS}
+    /home/johnson/SLAM/ch7/src/
 )
 
 add_executable(orb_cv orb_cv.cpp)
@@ -81,6 +82,27 @@ add_executable(BAGaussionNewton BAGaussionNewton.cpp orb_utils.hpp orb_utils.cpp
 target_link_libraries(BAGaussionNewton
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
+)
+
+add_executable(icp_svd icp_svd.cpp orb_utils.hpp orb_utils.cpp)
+target_link_libraries(icp_svd
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBRARIES}
+)
+
+add_executable(icp_g2o icp_g2o.cpp)
+target_link_libraries(icp_g2o
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBRARIES}
+    ${G2O_LIB}
+    /home/johnson/SLAM/ch7/build/bin/liborb_utils.so
+)
+
+add_executable(icp_gaussion icp_gaussion.cpp)
+target_link_libraries(icp_gaussion
+    ${OpenCV_LIBS}
+    ${EIGEN3_LIBRARIES}
+    /home/johnson/SLAM/ch7/build/bin/liborb_utils.so
 )
 
 # .so

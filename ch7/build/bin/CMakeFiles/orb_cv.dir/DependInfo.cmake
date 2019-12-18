@@ -15,6 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/johnson/Pangolin/include"
   "/home/johnson/Pangolin/build/src/include"
   "/usr/include/eigen3"
+  "../src"
   )
 
 # Targets to which this target links.

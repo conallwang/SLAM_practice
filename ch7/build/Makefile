@@ -124,6 +124,32 @@ orb_utils/fast:
 .PHONY : orb_utils/fast
 
 #=============================================================================
+# Target rules for targets named icp_gaussion
+
+# Build rule for target.
+icp_gaussion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_gaussion
+.PHONY : icp_gaussion
+
+# fast build rule for target.
+icp_gaussion/fast:
+	$(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/build
+.PHONY : icp_gaussion/fast
+
+#=============================================================================
+# Target rules for targets named icp_svd
+
+# Build rule for target.
+icp_svd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_svd
+.PHONY : icp_svd
+
+# fast build rule for target.
+icp_svd/fast:
+	$(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/build
+.PHONY : icp_svd/fast
+
+#=============================================================================
 # Target rules for targets named test1
 
 # Build rule for target.
@@ -241,6 +267,19 @@ BAG2O/fast:
 .PHONY : BAG2O/fast
 
 #=============================================================================
+# Target rules for targets named icp_g2o
+
+# Build rule for target.
+icp_g2o: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_g2o
+.PHONY : icp_g2o
+
+# fast build rule for target.
+icp_g2o/fast:
+	$(MAKE) -f bin/CMakeFiles/icp_g2o.dir/build.make bin/CMakeFiles/icp_g2o.dir/build
+.PHONY : icp_g2o/fast
+
+#=============================================================================
 # Target rules for targets named BAGaussionNewton
 
 # Build rule for target.
@@ -262,6 +301,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... orb_utils"
+	@echo "... icp_gaussion"
+	@echo "... icp_svd"
 	@echo "... test1"
 	@echo "... opencv_PnP"
 	@echo "... orb_test"
@@ -271,6 +312,7 @@ help:
 	@echo "... orb_cv"
 	@echo "... opencv_PnP_c"
 	@echo "... BAG2O"
+	@echo "... icp_g2o"
 	@echo "... BAGaussionNewton"
 .PHONY : help
 
