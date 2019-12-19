@@ -95,15 +95,23 @@ target_link_libraries(icp_g2o
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
     ${G2O_LIB}
-    /home/johnson/SLAM/ch7/build/bin/liborb_utils.so
+    /usr/lib/liborb_utils.so
 )
 
 add_executable(icp_gaussion icp_gaussion.cpp)
 target_link_libraries(icp_gaussion
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
-    /home/johnson/SLAM/ch7/build/bin/liborb_utils.so
+    /usr/lib/liborb_utils.so
 )
 
 # .so
 add_library(orb_utils SHARED orb_utils.hpp orb_utils.cpp)
+
+set_target_properties(orb_utils PROPERTIES VERSION 1.0 SOVERSION 1)
+
+install(TARGETS orb_utils
+    LIBRARY DESTINATION /usr/lib
+    ARCHIVE DESTINATION /usr/lib)
+
+install(FILES ${PROJECT_SOURCE_DIR}/src/orb_utils.hpp DESTINATION /usr/include)

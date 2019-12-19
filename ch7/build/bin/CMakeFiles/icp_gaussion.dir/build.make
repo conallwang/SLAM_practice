@@ -116,7 +116,7 @@ bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.s
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
-bin/icp_gaussion: bin/liborb_utils.so
+bin/icp_gaussion: /usr/lib/liborb_utils.so
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1

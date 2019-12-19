@@ -144,7 +144,7 @@ bin/icp_g2o: /usr/local/lib/libg2o_types_sba.so
 bin/icp_g2o: /usr/local/lib/libg2o_solver_slam2d_linear.so
 bin/icp_g2o: /usr/local/lib/libg2o_types_icp.so
 bin/icp_g2o: /usr/local/lib/libg2o_ext_freeglut_minimal.so
-bin/icp_g2o: bin/liborb_utils.so
+bin/icp_g2o: /usr/lib/liborb_utils.so
 bin/icp_g2o: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/icp_g2o: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/icp_g2o: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
