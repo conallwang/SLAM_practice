@@ -610,3 +610,54 @@ void Triangulation(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2,
         points.push_back(point);
     }
 }
+
+// Draw Cloud
+void DrawCloud(vector<cv::Point3d> points) {
+    if (points.empty()) {
+        cerr << "Point cloud is empty!" << endl;
+        return;
+    }
+
+    // Create pangolin window and plot
+    pangolin::CreateWindowAndBind("Viewer", 1024, 768);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    pangolin::OpenGlRenderState s_cam(
+    pangolin::ProjectionMatrix(1024, 768, 500, 500, 512, 389, 0.1, 1000),
+    pangolin::ModelViewLookAt(0, -0.1, -1.8, 0, 0, 0, 0.0, -1.0, 0.0)
+    );
+
+    pangolin::View &d_cam = pangolin::CreateDisplay()
+            .SetBounds(0.0, 1.0, 0.0, 1.0, -1024.0f/ 768.0f)
+            .SetHandler(new pangolin::Handler3D(s_cam));
+
+    while (!pangolin::ShouldQuit()) {
+        // clear buffer
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        d_cam.Activate(s_cam);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+        
+
+        glPointSize(2);
+        glBegin(GL_POINTS);
+        for (cv::Point3d p: points) {
+            glColor3f(0.0f, 0.0f, 0.0f);
+            glVertex3d(p.x, p.y, p.z);
+        }
+        glEnd();
+        pangolin::FinishFrame();
+        usleep(5000);
+    }
+}
+
+// Draw KeyPoints
+void DrawKeypoints(string gname, cv::Mat image, vector<mKeyPoint> keypoints, int radius, cv::Scalar color) {
+    for (mKeyPoint p: keypoints) {
+        cv::circle(image, cv::Point(p.GetPt().first, p.GetPt().second), radius, color);
+    }
+
+    cv::imshow(gname, image);
+}

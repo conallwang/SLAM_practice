@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o"
+  "CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o"
   "icp_gaussion.pdb"
   "icp_gaussion"
 )

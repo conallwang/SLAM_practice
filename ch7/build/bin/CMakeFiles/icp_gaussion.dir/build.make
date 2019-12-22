@@ -81,14 +81,40 @@ bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o.provides: bin/CMakeFiles/icp_
 bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o.provides.build: bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o
 
 
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o: bin/CMakeFiles/icp_gaussion.dir/flags.make
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o: ../src/orb_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o"
+	cd /home/johnson/SLAM/ch7/build/bin && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o -c /home/johnson/SLAM/ch7/src/orb_utils.cpp
+
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/icp_gaussion.dir/orb_utils.cpp.i"
+	cd /home/johnson/SLAM/ch7/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnson/SLAM/ch7/src/orb_utils.cpp > CMakeFiles/icp_gaussion.dir/orb_utils.cpp.i
+
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/icp_gaussion.dir/orb_utils.cpp.s"
+	cd /home/johnson/SLAM/ch7/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnson/SLAM/ch7/src/orb_utils.cpp -o CMakeFiles/icp_gaussion.dir/orb_utils.cpp.s
+
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.requires
+
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.provides: bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/icp_gaussion.dir/build.make bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.provides
+
+bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.provides.build: bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o
+
+
 # Object files for target icp_gaussion
 icp_gaussion_OBJECTS = \
-"CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o"
+"CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o" \
+"CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o"
 
 # External object files for target icp_gaussion
 icp_gaussion_EXTERNAL_OBJECTS =
 
 bin/icp_gaussion: bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o
+bin/icp_gaussion: bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o
 bin/icp_gaussion: bin/CMakeFiles/icp_gaussion.dir/build.make
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
@@ -116,7 +142,7 @@ bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.s
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
-bin/icp_gaussion: /usr/lib/liborb_utils.so
+bin/icp_gaussion: /home/johnson/Pangolin/build/src/libpangolin.so
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
@@ -136,8 +162,24 @@ bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 bin/icp_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-client.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-egl.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/icp_gaussion: /usr/lib/libOpenNI.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libz.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/libtiff.so
+bin/icp_gaussion: /usr/lib/x86_64-linux-gnu/liblz4.so
 bin/icp_gaussion: bin/CMakeFiles/icp_gaussion.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable icp_gaussion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable icp_gaussion"
 	cd /home/johnson/SLAM/ch7/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/icp_gaussion.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -146,6 +188,7 @@ bin/CMakeFiles/icp_gaussion.dir/build: bin/icp_gaussion
 .PHONY : bin/CMakeFiles/icp_gaussion.dir/build
 
 bin/CMakeFiles/icp_gaussion.dir/requires: bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o.requires
+bin/CMakeFiles/icp_gaussion.dir/requires: bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o.requires
 
 .PHONY : bin/CMakeFiles/icp_gaussion.dir/requires
 

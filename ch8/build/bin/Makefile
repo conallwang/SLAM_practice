@@ -205,6 +205,7 @@ flow_utils.o: flow_utils.cpp.o
 
 # target to build an object file
 flow_utils.cpp.o:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/flow_utils.cpp.o
 .PHONY : flow_utils.cpp.o
 
@@ -214,6 +215,7 @@ flow_utils.i: flow_utils.cpp.i
 
 # target to preprocess a source file
 flow_utils.cpp.i:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.i
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/flow_utils.cpp.i
 .PHONY : flow_utils.cpp.i
 
@@ -223,6 +225,7 @@ flow_utils.s: flow_utils.cpp.s
 
 # target to generate assembly for a file
 flow_utils.cpp.s:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.s
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/flow_utils.cpp.s
 .PHONY : flow_utils.cpp.s
 

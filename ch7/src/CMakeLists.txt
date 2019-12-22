@@ -1,4 +1,4 @@
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -mpopcnt")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -mpopcnt -lGL -lGLU -lglut")
 message(STATUS "-std=c++11")
 
 list(APPEND CMAKE_MODULE_PATH ../cmake_modules)
@@ -31,26 +31,25 @@ include_directories(
 add_executable(orb_cv orb_cv.cpp)
 target_link_libraries(orb_cv
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(orb_self orb_self.cpp)
 target_link_libraries(orb_self
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(orb_test orb_test.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(orb_test
     ${OpenCV_LIBS}
-)
-
-add_executable(test1 test.cpp orb_utils.hpp orb_utils.cpp)
-target_link_libraries(test1
-    ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(2d2d 2d2d.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(2d2d
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(triangulation triangulation orb_utils.hpp orb_utils.cpp)
@@ -62,6 +61,7 @@ target_link_libraries(triangulation
 add_executable(opencv_PnP opencv_PnP.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(opencv_PnP
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(opencv_PnP_c opencv_PnP_c.cpp)
@@ -76,33 +76,36 @@ target_link_libraries(BAG2O
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
     ${G2O_LIB}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(BAGaussionNewton BAGaussionNewton.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(BAGaussionNewton
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
+    ${Pangolin_LIBRARIES}
 )
 
 add_executable(icp_svd icp_svd.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(icp_svd
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
+    ${Pangolin_LIBRARIES}
 )
 
-add_executable(icp_g2o icp_g2o.cpp)
+add_executable(icp_g2o icp_g2o.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(icp_g2o
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
     ${G2O_LIB}
-    /usr/lib/liborb_utils.so
+    ${Pangolin_LIBRARIES}
 )
 
-add_executable(icp_gaussion icp_gaussion.cpp)
+add_executable(icp_gaussion icp_gaussion.cpp orb_utils.hpp orb_utils.cpp)
 target_link_libraries(icp_gaussion
     ${OpenCV_LIBS}
     ${EIGEN3_LIBRARIES}
-    /usr/lib/liborb_utils.so
+    ${Pangolin_LIBRARIES}
 )
 
 # .so

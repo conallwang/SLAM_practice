@@ -142,6 +142,7 @@ bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+bin/2d2d: /home/johnson/Pangolin/build/src/libpangolin.so
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
@@ -161,6 +162,22 @@ bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 bin/2d2d: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libwayland-client.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libwayland-egl.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/2d2d: /usr/lib/libOpenNI.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libz.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/libtiff.so
+bin/2d2d: /usr/lib/x86_64-linux-gnu/liblz4.so
 bin/2d2d: bin/CMakeFiles/2d2d.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable 2d2d"
 	cd /home/johnson/SLAM/ch7/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/2d2d.dir/link.txt --verbose=$(VERBOSE)

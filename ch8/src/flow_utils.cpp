@@ -1,5 +1,15 @@
 #include "flow_utils.hpp"
 
+// GetPixel
+uchar GetPixel(cv::Mat image, int x, int y) {
+    if (x < 0) x = 0;
+    if (x >= image.cols) x = image.cols - 1;
+    if (y < 0) y = 0;
+    if (y >= image.rows) y = image.rows - 1;
+
+    return image.at<uchar>(y, x);
+}
+
 // Constrcution
 OpticalFlow::OpticalFlow(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<bool> success, 
             bool inverse, int iter_num, int half_patch_size) {
@@ -27,14 +37,19 @@ void OpticalFlow::CalculateOpticalFlow(const cv::Range& range) {
                 for (int x=-half_patch_size;x<half_patch_size;x++) {
                     for (int y=-half_patch_size;y<half_patch_size;y++) {
                         Vector2d J;
-                        double e = image_1.at<uchar>(kp1[1] + y, kp1[0] + x) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx);
+                        double e = GetPixel(image_1, kp1[0] + x, kp1[1] + y) - GetPixel(image_2, kp1[0] + x + dx, kp1[1] + y + dy);
+                        // double e = image_1.at<uchar>(kp1[1] + y, kp1[0] + x) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx);
                         if (!inverse) {
-                            J << 0.5 * (image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx + 1) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx - 1)),
-                                 0.5 * (image_2.at<uchar>(kp1[1] + y + dy + 1, kp1[0] + x + dx) - image_2.at<uchar>(kp1[1] + y + dy - 1, kp1[0] + x + dx));
+                            J << 0.5 * (GetPixel(image_2, kp1[0] + x + dx + 1, kp1[1] + y + dy) - GetPixel(image_2, kp1[0] + x + dx -1, kp1[1] + y + dy)),
+                                 0.5 * (GetPixel(image_2, kp1[0] + x + dx, kp1[1] + y + dy + 1) - GetPixel(image_2, kp1[0] + x + dx, kp1[1] + y + dy + 1));
+                            // J << 0.5 * (image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx + 1) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx - 1)),
+                            //     0.5 * (image_2.at<uchar>(kp1[1] + y + dy + 1, kp1[0] + x + dx) - image_2.at<uchar>(kp1[1] + y + dy - 1, kp1[0] + x + dx));
                         }
                         else if(epoch == 0) {
-                            J << 0.5 * (image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx + 1) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx - 1)),
-                                 0.5 * (image_2.at<uchar>(kp1[1] + y + dy + 1, kp1[0] + x + dx) - image_2.at<uchar>(kp1[1] + y + dy - 1, kp1[0] + x + dx));
+                            J << 0.5 * (GetPixel(image_2, kp1[0] + x + dx + 1, kp1[1] + y + dy) - GetPixel(image_2, kp1[0] + x + dx -1, kp1[1] + y + dy)),
+                                 0.5 * (GetPixel(image_2, kp1[0] + x + dx, kp1[1] + y + dy + 1) - GetPixel(image_2, kp1[0] + x + dx, kp1[1] + y + dy + 1));
+                            // J << 0.5 * (image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx + 1) - image_2.at<uchar>(kp1[1] + y + dy, kp1[0] + x + dx - 1)),
+                            //      0.5 * (image_2.at<uchar>(kp1[1] + y + dy + 1, kp1[0] + x + dx) - image_2.at<uchar>(kp1[1] + y + dy - 1, kp1[0] + x + dx));
                         }
 
                         if (!inverse || epoch == 0)
@@ -44,7 +59,7 @@ void OpticalFlow::CalculateOpticalFlow(const cv::Range& range) {
                     }
                 }
 
-                // cout << "[INFO] point " << i << ": epoch = " << epoch << ", error = " << error << endl;
+                cout << "[INFO] point " << i << ": epoch = " << epoch << ", error = " << error << endl;
 
                 // delta
                 Vector2d dxy = JJT.ldlt().solve(Je);

@@ -6,6 +6,8 @@
 string img_1 = "/home/johnson/SLAM/ch8/pics/LK1.png";
 string img_2 = "/home/johnson/SLAM/ch8/pics/LK2.png";
 
+
+
 void CalculateOpticalFlowSingleLevel(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, 
                                     vector<bool> success, bool inverse = false, int iter_num = 100, int half_patch_size = 4) {
     keypoints_2.resize(keypoints_1.size());
@@ -33,8 +35,11 @@ int main() {
     vector<mKeyPoint> keypoints_1, keypoints_2;
     if (!FeatureExtract(image_1, keypoints_1)) return 1;
 
+    cout << "\n[STATUS] Starting calculate Optical Flow using Gaussion ... \n";
     vector<bool> success;
     CalculateOpticalFlowSingleLevel(image_1, image_2, keypoints_1, keypoints_2, success);
+
+
 
     return 0;
 }

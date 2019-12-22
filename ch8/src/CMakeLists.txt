@@ -19,11 +19,10 @@ target_link_libraries(optical_flow
     ${OpenCV_LIBS}
 )
 
-add_executable(optical_flow_gaussion optical_flow_gaussion.cpp)
+add_executable(optical_flow_gaussion optical_flow_gaussion.cpp flow_utils.hpp flow_utils.cpp)
 target_link_libraries(optical_flow_gaussion
     ${OpenCV_LIBS}
     /usr/lib/liborb_utils.so
-    /usr/lib/libflow_utils.so
 )
 
 # flow_utils.so 

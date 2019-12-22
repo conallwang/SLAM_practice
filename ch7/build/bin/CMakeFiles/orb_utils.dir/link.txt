@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC  -std=c++11 -mpopcnt  -shared -Wl,-soname,liborb_utils.so.1 -o liborb_utils.so.1.0 CMakeFiles/orb_utils.dir/orb_utils.cpp.o 
+/usr/bin/c++  -fPIC  -std=c++11 -mpopcnt -lGL -lGLU -lglut  -shared -Wl,-soname,liborb_utils.so.1 -o liborb_utils.so.1.0 CMakeFiles/orb_utils.dir/orb_utils.cpp.o 

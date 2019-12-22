@@ -142,6 +142,7 @@ bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+bin/icp_svd: /home/johnson/Pangolin/build/src/libpangolin.so
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
@@ -161,6 +162,22 @@ bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 bin/icp_svd: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libwayland-client.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libwayland-egl.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/icp_svd: /usr/lib/libOpenNI.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libz.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/libtiff.so
+bin/icp_svd: /usr/lib/x86_64-linux-gnu/liblz4.so
 bin/icp_svd: bin/CMakeFiles/icp_svd.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable icp_svd"
 	cd /home/johnson/SLAM/ch7/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/icp_svd.dir/link.txt --verbose=$(VERBOSE)

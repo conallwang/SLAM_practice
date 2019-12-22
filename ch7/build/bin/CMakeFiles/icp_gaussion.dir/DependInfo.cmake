@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/johnson/SLAM/ch7/src/icp_gaussion.cpp" "/home/johnson/SLAM/ch7/build/bin/CMakeFiles/icp_gaussion.dir/icp_gaussion.cpp.o"
+  "/home/johnson/SLAM/ch7/src/orb_utils.cpp" "/home/johnson/SLAM/ch7/build/bin/CMakeFiles/icp_gaussion.dir/orb_utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

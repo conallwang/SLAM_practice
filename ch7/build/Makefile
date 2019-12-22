@@ -181,43 +181,17 @@ icp_gaussion/fast:
 .PHONY : icp_gaussion/fast
 
 #=============================================================================
-# Target rules for targets named icp_svd
+# Target rules for targets named 2d2d
 
 # Build rule for target.
-icp_svd: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 icp_svd
-.PHONY : icp_svd
+2d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 2d2d
+.PHONY : 2d2d
 
 # fast build rule for target.
-icp_svd/fast:
-	$(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/build
-.PHONY : icp_svd/fast
-
-#=============================================================================
-# Target rules for targets named test1
-
-# Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
-
-# fast build rule for target.
-test1/fast:
-	$(MAKE) -f bin/CMakeFiles/test1.dir/build.make bin/CMakeFiles/test1.dir/build
-.PHONY : test1/fast
-
-#=============================================================================
-# Target rules for targets named opencv_PnP
-
-# Build rule for target.
-opencv_PnP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencv_PnP
-.PHONY : opencv_PnP
-
-# fast build rule for target.
-opencv_PnP/fast:
-	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/build
-.PHONY : opencv_PnP/fast
+2d2d/fast:
+	$(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
+.PHONY : 2d2d/fast
 
 #=============================================================================
 # Target rules for targets named orb_test
@@ -231,19 +205,6 @@ orb_test: cmake_check_build_system
 orb_test/fast:
 	$(MAKE) -f bin/CMakeFiles/orb_test.dir/build.make bin/CMakeFiles/orb_test.dir/build
 .PHONY : orb_test/fast
-
-#=============================================================================
-# Target rules for targets named 2d2d
-
-# Build rule for target.
-2d2d: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 2d2d
-.PHONY : 2d2d
-
-# fast build rule for target.
-2d2d/fast:
-	$(MAKE) -f bin/CMakeFiles/2d2d.dir/build.make bin/CMakeFiles/2d2d.dir/build
-.PHONY : 2d2d/fast
 
 #=============================================================================
 # Target rules for targets named triangulation
@@ -283,6 +244,19 @@ orb_cv: cmake_check_build_system
 orb_cv/fast:
 	$(MAKE) -f bin/CMakeFiles/orb_cv.dir/build.make bin/CMakeFiles/orb_cv.dir/build
 .PHONY : orb_cv/fast
+
+#=============================================================================
+# Target rules for targets named opencv_PnP
+
+# Build rule for target.
+opencv_PnP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencv_PnP
+.PHONY : opencv_PnP
+
+# fast build rule for target.
+opencv_PnP/fast:
+	$(MAKE) -f bin/CMakeFiles/opencv_PnP.dir/build.make bin/CMakeFiles/opencv_PnP.dir/build
+.PHONY : opencv_PnP/fast
 
 #=============================================================================
 # Target rules for targets named opencv_PnP_c
@@ -336,6 +310,19 @@ BAGaussionNewton/fast:
 	$(MAKE) -f bin/CMakeFiles/BAGaussionNewton.dir/build.make bin/CMakeFiles/BAGaussionNewton.dir/build
 .PHONY : BAGaussionNewton/fast
 
+#=============================================================================
+# Target rules for targets named icp_svd
+
+# Build rule for target.
+icp_svd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 icp_svd
+.PHONY : icp_svd
+
+# fast build rule for target.
+icp_svd/fast:
+	$(MAKE) -f bin/CMakeFiles/icp_svd.dir/build.make bin/CMakeFiles/icp_svd.dir/build
+.PHONY : icp_svd/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,18 +337,17 @@ help:
 	@echo "... edit_cache"
 	@echo "... orb_utils"
 	@echo "... icp_gaussion"
-	@echo "... icp_svd"
-	@echo "... test1"
-	@echo "... opencv_PnP"
-	@echo "... orb_test"
 	@echo "... 2d2d"
+	@echo "... orb_test"
 	@echo "... triangulation"
 	@echo "... orb_self"
 	@echo "... orb_cv"
+	@echo "... opencv_PnP"
 	@echo "... opencv_PnP_c"
 	@echo "... BAG2O"
 	@echo "... icp_g2o"
 	@echo "... BAGaussionNewton"
+	@echo "... icp_svd"
 .PHONY : help
 
 

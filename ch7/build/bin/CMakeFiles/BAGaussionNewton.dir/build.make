@@ -142,6 +142,7 @@ bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+bin/BAGaussionNewton: /home/johnson/Pangolin/build/src/libpangolin.so
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
@@ -161,6 +162,22 @@ bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 bin/BAGaussionNewton: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libwayland-client.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libwayland-egl.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/BAGaussionNewton: /usr/lib/libOpenNI.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libz.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/libtiff.so
+bin/BAGaussionNewton: /usr/lib/x86_64-linux-gnu/liblz4.so
 bin/BAGaussionNewton: bin/CMakeFiles/BAGaussionNewton.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable BAGaussionNewton"
 	cd /home/johnson/SLAM/ch7/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BAGaussionNewton.dir/link.txt --verbose=$(VERBOSE)

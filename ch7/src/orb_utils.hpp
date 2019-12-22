@@ -9,6 +9,7 @@
 #define ORB_UTILS_
 #include <iostream>
 #include <algorithm>
+#include <unistd.h>
 using namespace std;
 
 #include <opencv2/opencv.hpp>
@@ -18,6 +19,8 @@ using namespace std;
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
+
+#include <pangolin/pangolin.h>
 using namespace Eigen;
 
 typedef pair<int, int> Point;
@@ -108,5 +111,11 @@ void PoseEstimate2d2d(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints
 
 // trianglar measurement
 void Triangulation(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<cv::DMatch> matches, cv::Mat R, cv::Mat t, vector<cv::Point3d>& points);
+
+// Draw Cloud
+void DrawCloud(vector<cv::Point3d> points);
+
+// Draw KeyPoints
+void DrawKeypoints(cv::Mat image, vector<mKeyPoint> keypoints, int radius = 2, cv::Scalar color = cv::Scalar(0, 0, 0));
 
 #endif
