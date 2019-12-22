@@ -23,6 +23,11 @@ OpticalFlow::OpticalFlow(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> key
     this->half_patch_size = half_patch_size;
 }
 
+// GetResult
+vector<mKeyPoint> OpticalFlow::GetResult() {
+    return keypoints_2;
+}
+
 // CalculateOpticalFlow
 void OpticalFlow::CalculateOpticalFlow(const cv::Range& range) {
     for (int i=range.start;i<range.end;i++) {

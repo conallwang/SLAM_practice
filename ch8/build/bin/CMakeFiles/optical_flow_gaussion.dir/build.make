@@ -57,33 +57,9 @@ include bin/CMakeFiles/optical_flow_gaussion.dir/progress.make
 # Include the compile flags for this target's objects.
 include bin/CMakeFiles/optical_flow_gaussion.dir/flags.make
 
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o: bin/CMakeFiles/optical_flow_gaussion.dir/flags.make
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o: ../src/optical_flow_gaussion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o"
-	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o -c /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp
-
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i"
-	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp > CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i
-
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s"
-	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp -o CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s
-
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires:
-
-.PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
-
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
-	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides.build
-.PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides
-
-bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides.build: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o
-
-
 bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o: bin/CMakeFiles/optical_flow_gaussion.dir/flags.make
 bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o: ../src/flow_utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o"
 	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o -c /home/johnson/SLAM/ch8/src/flow_utils.cpp
 
 bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.i: cmake_force
@@ -105,16 +81,40 @@ bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o.provides: bin/CMakeFil
 bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o.provides.build: bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o
 
 
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o: bin/CMakeFiles/optical_flow_gaussion.dir/flags.make
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o: ../src/optical_flow_gaussion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o"
+	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o -c /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp
+
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i"
+	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp > CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.i
+
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s"
+	cd /home/johnson/SLAM/ch8/build/bin && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnson/SLAM/ch8/src/optical_flow_gaussion.cpp -o CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.s
+
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires:
+
+.PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
+
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
+	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides.build
+.PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides
+
+bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.provides.build: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o
+
+
 # Object files for target optical_flow_gaussion
 optical_flow_gaussion_OBJECTS = \
-"CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o" \
-"CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o"
+"CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o" \
+"CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o"
 
 # External object files for target optical_flow_gaussion
 optical_flow_gaussion_EXTERNAL_OBJECTS =
 
-bin/optical_flow_gaussion: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o
 bin/optical_flow_gaussion: bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o
+bin/optical_flow_gaussion: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o
 bin/optical_flow_gaussion: bin/CMakeFiles/optical_flow_gaussion.dir/build.make
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
@@ -142,6 +142,7 @@ bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeat
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+bin/optical_flow_gaussion: /home/johnson/Pangolin/build/src/libpangolin.so
 bin/optical_flow_gaussion: /usr/lib/liborb_utils.so
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
@@ -162,6 +163,22 @@ bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgco
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 bin/optical_flow_gaussion: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libGLU.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libGL.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-client.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-egl.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libwayland-cursor.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libSM.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libICE.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libX11.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libXext.so
+bin/optical_flow_gaussion: /usr/lib/libOpenNI.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libpng.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libz.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libjpeg.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/libtiff.so
+bin/optical_flow_gaussion: /usr/lib/x86_64-linux-gnu/liblz4.so
 bin/optical_flow_gaussion: bin/CMakeFiles/optical_flow_gaussion.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable optical_flow_gaussion"
 	cd /home/johnson/SLAM/ch8/build/bin && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/optical_flow_gaussion.dir/link.txt --verbose=$(VERBOSE)
@@ -171,8 +188,8 @@ bin/CMakeFiles/optical_flow_gaussion.dir/build: bin/optical_flow_gaussion
 
 .PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/build
 
-bin/CMakeFiles/optical_flow_gaussion.dir/requires: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
 bin/CMakeFiles/optical_flow_gaussion.dir/requires: bin/CMakeFiles/optical_flow_gaussion.dir/flow_utils.cpp.o.requires
+bin/CMakeFiles/optical_flow_gaussion.dir/requires: bin/CMakeFiles/optical_flow_gaussion.dir/optical_flow_gaussion.cpp.o.requires
 
 .PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/requires
 

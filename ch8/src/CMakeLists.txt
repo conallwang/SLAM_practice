@@ -1,5 +1,9 @@
 add_definitions(-std=c++11)
 
+find_package(Pangolin REQUIRED)
+message(STATUS "Pangolin FOUND: ${Pangolin_INCLUDE_DIRS}")
+message(STATUS "Pangolin libs: ${Pangolin_LIBRARIES}")
+
 find_package(OpenCV REQUIRED)
 message(STATUS "OpenCV FOUND: ${OpenCV_INCLUDE_DIRS}")
 message(STATUS "OpenCV libs: ${OpenCV_LIBS}")
@@ -11,17 +15,20 @@ message(STATUS "Eigen3 libs: ${EIGEN3_LIBRARIES}")
 include_directories(
     ${OpenCV_INCLUDE_DIRS}
     ${EIGEN3_INCLUDE_DIRS}
+    ${Pangolin_INCLUDE_DIRS}
 )
 
 add_executable(optical_flow optical_flow.cpp)
 target_link_libraries(optical_flow
     /usr/lib/liborb_utils.so
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
 )
 
-add_executable(optical_flow_gaussion optical_flow_gaussion.cpp flow_utils.hpp flow_utils.cpp)
+add_executable(optical_flow_gaussion flow_utils.hpp flow_utils.cpp optical_flow_gaussion.cpp)
 target_link_libraries(optical_flow_gaussion
     ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
     /usr/lib/liborb_utils.so
 )
 

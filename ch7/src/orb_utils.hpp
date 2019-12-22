@@ -116,6 +116,6 @@ void Triangulation(vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2,
 void DrawCloud(vector<cv::Point3d> points);
 
 // Draw KeyPoints
-void DrawKeypoints(cv::Mat image, vector<mKeyPoint> keypoints, int radius = 2, cv::Scalar color = cv::Scalar(0, 0, 0));
+void DrawKeypoints(string gname, cv::Mat image, vector<mKeyPoint> keypoints, int radius = 2, cv::Scalar color = cv::Scalar(0, 0, 0));
 
 #endif

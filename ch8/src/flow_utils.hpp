@@ -28,6 +28,8 @@ class OpticalFlow {
             bool inverse = false, int iter_num = 100, int half_patch_size = 4);
 
     void CalculateOpticalFlow(const cv::Range& range);
+
+    vector<mKeyPoint> GetResult();
 };
 
 #endif
