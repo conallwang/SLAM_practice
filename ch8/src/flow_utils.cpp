@@ -12,7 +12,7 @@ uchar GetPixel(cv::Mat image, int x, int y) {
 
 // Constrcution
 OpticalFlow::OpticalFlow(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> keypoints_1, vector<mKeyPoint> keypoints_2, vector<bool> success, 
-            bool inverse, int iter_num, int half_patch_size) {
+            bool inverse, bool has_initial, int iter_num, int half_patch_size) {
     this->image_1 = image_1;
     this->image_2 = image_2;
     this->keypoints_1 = keypoints_1;
@@ -21,6 +21,7 @@ OpticalFlow::OpticalFlow(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> key
     this->inverse = inverse;
     this->iter_num = iter_num;
     this->half_patch_size = half_patch_size;
+    this->has_initial = has_initial;
 }
 
 // GetResult
@@ -34,6 +35,12 @@ void OpticalFlow::CalculateOpticalFlow(const cv::Range& range) {
             Vector2d kp1(keypoints_1[i].GetPt().first, keypoints_1[i].GetPt().second);
             double dx = 0.0;
             double dy = 0.0;
+            if (has_initial) {
+                Vector2d kp2_t(keypoints_2[i].GetPt().first, keypoints_2[i].GetPt().second);
+                dx = kp2_t[0] - kp1[0];
+                dy = kp2_t[1] - kp1[1];
+            }
+
             for (int epoch=0;epoch<iter_num;epoch++) {
                 Matrix2d JJT = Matrix2d::Zero();
                 Vector2d Je = Vector2d::Zero();
