@@ -32,6 +32,19 @@ target_link_libraries(optical_flow_gaussion
     /usr/lib/liborb_utils.so
 )
 
+add_executable(direct_estimate direct_estimate.cpp)
+target_link_libraries(direct_estimate
+    ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
+    /usr/lib/liborb_utils.so
+)
+
+add_executable(direct_method direct_method.cpp)
+target_link_libraries(direct_method
+    ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
+)
+
 # flow_utils.so 
 add_library(flow_utils SHARED flow_utils.hpp flow_utils.cpp)
 

@@ -155,17 +155,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named optical_flow
+# Target rules for targets named direct_method
 
 # Build rule for target.
-optical_flow: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 optical_flow
-.PHONY : optical_flow
+direct_method: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 direct_method
+.PHONY : direct_method
 
 # fast build rule for target.
-optical_flow/fast:
-	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
-.PHONY : optical_flow/fast
+direct_method/fast:
+	$(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/build
+.PHONY : direct_method/fast
+
+#=============================================================================
+# Target rules for targets named direct_estimate
+
+# Build rule for target.
+direct_estimate: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 direct_estimate
+.PHONY : direct_estimate
+
+# fast build rule for target.
+direct_estimate/fast:
+	$(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/build
+.PHONY : direct_estimate/fast
 
 #=============================================================================
 # Target rules for targets named optical_flow_gaussion
@@ -179,6 +192,19 @@ optical_flow_gaussion: cmake_check_build_system
 optical_flow_gaussion/fast:
 	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/build
 .PHONY : optical_flow_gaussion/fast
+
+#=============================================================================
+# Target rules for targets named optical_flow
+
+# Build rule for target.
+optical_flow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 optical_flow
+.PHONY : optical_flow
+
+# fast build rule for target.
+optical_flow/fast:
+	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
+.PHONY : optical_flow/fast
 
 #=============================================================================
 # Target rules for targets named flow_utils
@@ -205,8 +231,10 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... optical_flow"
+	@echo "... direct_method"
+	@echo "... direct_estimate"
 	@echo "... optical_flow_gaussion"
+	@echo "... optical_flow"
 	@echo "... flow_utils"
 .PHONY : help
 

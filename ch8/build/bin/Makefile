@@ -68,26 +68,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -100,6 +90,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -111,16 +112,15 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : rebuild_cache/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,19 +155,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bin/CMakeFiles/optical_flow.dir/rule:
-	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/optical_flow.dir/rule
-.PHONY : bin/CMakeFiles/optical_flow.dir/rule
+bin/CMakeFiles/direct_method.dir/rule:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/direct_method.dir/rule
+.PHONY : bin/CMakeFiles/direct_method.dir/rule
 
 # Convenience name for target.
-optical_flow: bin/CMakeFiles/optical_flow.dir/rule
+direct_method: bin/CMakeFiles/direct_method.dir/rule
 
-.PHONY : optical_flow
+.PHONY : direct_method
 
 # fast build rule for target.
-optical_flow/fast:
-	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
-.PHONY : optical_flow/fast
+direct_method/fast:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/build
+.PHONY : direct_method/fast
+
+# Convenience name for target.
+bin/CMakeFiles/direct_estimate.dir/rule:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/direct_estimate.dir/rule
+.PHONY : bin/CMakeFiles/direct_estimate.dir/rule
+
+# Convenience name for target.
+direct_estimate: bin/CMakeFiles/direct_estimate.dir/rule
+
+.PHONY : direct_estimate
+
+# fast build rule for target.
+direct_estimate/fast:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/build
+.PHONY : direct_estimate/fast
 
 # Convenience name for target.
 bin/CMakeFiles/optical_flow_gaussion.dir/rule:
@@ -185,6 +200,21 @@ optical_flow_gaussion/fast:
 .PHONY : optical_flow_gaussion/fast
 
 # Convenience name for target.
+bin/CMakeFiles/optical_flow.dir/rule:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/optical_flow.dir/rule
+.PHONY : bin/CMakeFiles/optical_flow.dir/rule
+
+# Convenience name for target.
+optical_flow: bin/CMakeFiles/optical_flow.dir/rule
+
+.PHONY : optical_flow
+
+# fast build rule for target.
+optical_flow/fast:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
+.PHONY : optical_flow/fast
+
+# Convenience name for target.
 bin/CMakeFiles/flow_utils.dir/rule:
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/flow_utils.dir/rule
 .PHONY : bin/CMakeFiles/flow_utils.dir/rule
@@ -198,6 +228,60 @@ flow_utils: bin/CMakeFiles/flow_utils.dir/rule
 flow_utils/fast:
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/build
 .PHONY : flow_utils/fast
+
+direct_estimate.o: direct_estimate.cpp.o
+
+.PHONY : direct_estimate.o
+
+# target to build an object file
+direct_estimate.cpp.o:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/direct_estimate.cpp.o
+.PHONY : direct_estimate.cpp.o
+
+direct_estimate.i: direct_estimate.cpp.i
+
+.PHONY : direct_estimate.i
+
+# target to preprocess a source file
+direct_estimate.cpp.i:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/direct_estimate.cpp.i
+.PHONY : direct_estimate.cpp.i
+
+direct_estimate.s: direct_estimate.cpp.s
+
+.PHONY : direct_estimate.s
+
+# target to generate assembly for a file
+direct_estimate.cpp.s:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/direct_estimate.cpp.s
+.PHONY : direct_estimate.cpp.s
+
+direct_method.o: direct_method.cpp.o
+
+.PHONY : direct_method.o
+
+# target to build an object file
+direct_method.cpp.o:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/direct_method.cpp.o
+.PHONY : direct_method.cpp.o
+
+direct_method.i: direct_method.cpp.i
+
+.PHONY : direct_method.i
+
+# target to preprocess a source file
+direct_method.cpp.i:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/direct_method.cpp.i
+.PHONY : direct_method.cpp.i
+
+direct_method.s: direct_method.cpp.s
+
+.PHONY : direct_method.s
+
+# target to generate assembly for a file
+direct_method.cpp.s:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/direct_method.cpp.s
+.PHONY : direct_method.cpp.s
 
 flow_utils.o: flow_utils.cpp.o
 
@@ -290,14 +374,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
-	@echo "... optical_flow"
-	@echo "... install/local"
-	@echo "... install/strip"
+	@echo "... direct_method"
+	@echo "... direct_estimate"
 	@echo "... optical_flow_gaussion"
-	@echo "... rebuild_cache"
+	@echo "... optical_flow"
 	@echo "... flow_utils"
+	@echo "... rebuild_cache"
+	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... direct_estimate.o"
+	@echo "... direct_estimate.i"
+	@echo "... direct_estimate.s"
+	@echo "... direct_method.o"
+	@echo "... direct_method.i"
+	@echo "... direct_method.s"
 	@echo "... flow_utils.o"
 	@echo "... flow_utils.i"
 	@echo "... flow_utils.s"

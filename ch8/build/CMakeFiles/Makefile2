@@ -63,15 +63,19 @@ CMAKE_BINARY_DIR = /home/johnson/SLAM/ch8/build
 # Directory level rules for directory bin
 
 # Convenience name for "all" pass in the directory.
-bin/all: bin/CMakeFiles/optical_flow.dir/all
+bin/all: bin/CMakeFiles/direct_method.dir/all
+bin/all: bin/CMakeFiles/direct_estimate.dir/all
 bin/all: bin/CMakeFiles/optical_flow_gaussion.dir/all
+bin/all: bin/CMakeFiles/optical_flow.dir/all
 bin/all: bin/CMakeFiles/flow_utils.dir/all
 
 .PHONY : bin/all
 
 # Convenience name for "clean" pass in the directory.
-bin/clean: bin/CMakeFiles/optical_flow.dir/clean
+bin/clean: bin/CMakeFiles/direct_method.dir/clean
+bin/clean: bin/CMakeFiles/direct_estimate.dir/clean
 bin/clean: bin/CMakeFiles/optical_flow_gaussion.dir/clean
+bin/clean: bin/CMakeFiles/optical_flow.dir/clean
 bin/clean: bin/CMakeFiles/flow_utils.dir/clean
 
 .PHONY : bin/clean
@@ -82,39 +86,76 @@ bin/preinstall:
 .PHONY : bin/preinstall
 
 #=============================================================================
-# Target rules for target bin/CMakeFiles/optical_flow.dir
+# Target rules for target bin/CMakeFiles/direct_method.dir
 
 # All Build rule for target.
-bin/CMakeFiles/optical_flow.dir/all:
-	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/depend
-	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=3,4 "Built target optical_flow"
-.PHONY : bin/CMakeFiles/optical_flow.dir/all
+bin/CMakeFiles/direct_method.dir/all:
+	$(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/depend
+	$(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=3,4 "Built target direct_method"
+.PHONY : bin/CMakeFiles/direct_method.dir/all
 
 # Include target in all.
-all: bin/CMakeFiles/optical_flow.dir/all
+all: bin/CMakeFiles/direct_method.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-bin/CMakeFiles/optical_flow.dir/rule: cmake_check_build_system
+bin/CMakeFiles/direct_method.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/optical_flow.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/direct_method.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 0
-.PHONY : bin/CMakeFiles/optical_flow.dir/rule
+.PHONY : bin/CMakeFiles/direct_method.dir/rule
 
 # Convenience name for target.
-optical_flow: bin/CMakeFiles/optical_flow.dir/rule
+direct_method: bin/CMakeFiles/direct_method.dir/rule
 
-.PHONY : optical_flow
-
-# clean rule for target.
-bin/CMakeFiles/optical_flow.dir/clean:
-	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/clean
-.PHONY : bin/CMakeFiles/optical_flow.dir/clean
+.PHONY : direct_method
 
 # clean rule for target.
-clean: bin/CMakeFiles/optical_flow.dir/clean
+bin/CMakeFiles/direct_method.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/direct_method.dir/build.make bin/CMakeFiles/direct_method.dir/clean
+.PHONY : bin/CMakeFiles/direct_method.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/direct_method.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/direct_estimate.dir
+
+# All Build rule for target.
+bin/CMakeFiles/direct_estimate.dir/all:
+	$(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/depend
+	$(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=1,2 "Built target direct_estimate"
+.PHONY : bin/CMakeFiles/direct_estimate.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/direct_estimate.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/direct_estimate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/direct_estimate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/direct_estimate.dir/rule
+
+# Convenience name for target.
+direct_estimate: bin/CMakeFiles/direct_estimate.dir/rule
+
+.PHONY : direct_estimate
+
+# clean rule for target.
+bin/CMakeFiles/direct_estimate.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/direct_estimate.dir/build.make bin/CMakeFiles/direct_estimate.dir/clean
+.PHONY : bin/CMakeFiles/direct_estimate.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/direct_estimate.dir/clean
 
 .PHONY : clean
 
@@ -125,7 +166,7 @@ clean: bin/CMakeFiles/optical_flow.dir/clean
 bin/CMakeFiles/optical_flow_gaussion.dir/all:
 	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/depend
 	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=5,6,7 "Built target optical_flow_gaussion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=9,10,11 "Built target optical_flow_gaussion"
 .PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/all
 
 # Include target in all.
@@ -156,13 +197,50 @@ clean: bin/CMakeFiles/optical_flow_gaussion.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target bin/CMakeFiles/optical_flow.dir
+
+# All Build rule for target.
+bin/CMakeFiles/optical_flow.dir/all:
+	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/depend
+	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=7,8 "Built target optical_flow"
+.PHONY : bin/CMakeFiles/optical_flow.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/optical_flow.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/optical_flow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/optical_flow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/optical_flow.dir/rule
+
+# Convenience name for target.
+optical_flow: bin/CMakeFiles/optical_flow.dir/rule
+
+.PHONY : optical_flow
+
+# clean rule for target.
+bin/CMakeFiles/optical_flow.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/clean
+.PHONY : bin/CMakeFiles/optical_flow.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/optical_flow.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target bin/CMakeFiles/flow_utils.dir
 
 # All Build rule for target.
 bin/CMakeFiles/flow_utils.dir/all:
 	$(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/depend
 	$(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=1,2 "Built target flow_utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=5,6 "Built target flow_utils"
 .PHONY : bin/CMakeFiles/flow_utils.dir/all
 
 # Include target in all.
