@@ -45,6 +45,12 @@ target_link_libraries(direct_method
     ${Pangolin_LIBRARIES}
 )
 
+add_executable(generate_cloud generate_cloud.cpp)
+target_link_libraries(generate_cloud
+    ${OpenCV_LIBS}
+    ${Pangolin_LIBRARIES}
+)
+
 # flow_utils.so 
 add_library(flow_utils SHARED flow_utils.hpp flow_utils.cpp)
 

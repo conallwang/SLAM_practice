@@ -67,6 +67,7 @@ bin/all: bin/CMakeFiles/direct_method.dir/all
 bin/all: bin/CMakeFiles/direct_estimate.dir/all
 bin/all: bin/CMakeFiles/optical_flow_gaussion.dir/all
 bin/all: bin/CMakeFiles/optical_flow.dir/all
+bin/all: bin/CMakeFiles/generate_cloud.dir/all
 bin/all: bin/CMakeFiles/flow_utils.dir/all
 
 .PHONY : bin/all
@@ -76,6 +77,7 @@ bin/clean: bin/CMakeFiles/direct_method.dir/clean
 bin/clean: bin/CMakeFiles/direct_estimate.dir/clean
 bin/clean: bin/CMakeFiles/optical_flow_gaussion.dir/clean
 bin/clean: bin/CMakeFiles/optical_flow.dir/clean
+bin/clean: bin/CMakeFiles/generate_cloud.dir/clean
 bin/clean: bin/CMakeFiles/flow_utils.dir/clean
 
 .PHONY : bin/clean
@@ -166,7 +168,7 @@ clean: bin/CMakeFiles/direct_estimate.dir/clean
 bin/CMakeFiles/optical_flow_gaussion.dir/all:
 	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/depend
 	$(MAKE) -f bin/CMakeFiles/optical_flow_gaussion.dir/build.make bin/CMakeFiles/optical_flow_gaussion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=9,10,11 "Built target optical_flow_gaussion"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=11,12,13 "Built target optical_flow_gaussion"
 .PHONY : bin/CMakeFiles/optical_flow_gaussion.dir/all
 
 # Include target in all.
@@ -203,7 +205,7 @@ clean: bin/CMakeFiles/optical_flow_gaussion.dir/clean
 bin/CMakeFiles/optical_flow.dir/all:
 	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/depend
 	$(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=7,8 "Built target optical_flow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=9,10 "Built target optical_flow"
 .PHONY : bin/CMakeFiles/optical_flow.dir/all
 
 # Include target in all.
@@ -230,6 +232,43 @@ bin/CMakeFiles/optical_flow.dir/clean:
 
 # clean rule for target.
 clean: bin/CMakeFiles/optical_flow.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target bin/CMakeFiles/generate_cloud.dir
+
+# All Build rule for target.
+bin/CMakeFiles/generate_cloud.dir/all:
+	$(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/depend
+	$(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnson/SLAM/ch8/build/CMakeFiles --progress-num=7,8 "Built target generate_cloud"
+.PHONY : bin/CMakeFiles/generate_cloud.dir/all
+
+# Include target in all.
+all: bin/CMakeFiles/generate_cloud.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+bin/CMakeFiles/generate_cloud.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/generate_cloud.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnson/SLAM/ch8/build/CMakeFiles 0
+.PHONY : bin/CMakeFiles/generate_cloud.dir/rule
+
+# Convenience name for target.
+generate_cloud: bin/CMakeFiles/generate_cloud.dir/rule
+
+.PHONY : generate_cloud
+
+# clean rule for target.
+bin/CMakeFiles/generate_cloud.dir/clean:
+	$(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/clean
+.PHONY : bin/CMakeFiles/generate_cloud.dir/clean
+
+# clean rule for target.
+clean: bin/CMakeFiles/generate_cloud.dir/clean
 
 .PHONY : clean
 

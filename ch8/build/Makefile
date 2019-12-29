@@ -207,6 +207,19 @@ optical_flow/fast:
 .PHONY : optical_flow/fast
 
 #=============================================================================
+# Target rules for targets named generate_cloud
+
+# Build rule for target.
+generate_cloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 generate_cloud
+.PHONY : generate_cloud
+
+# fast build rule for target.
+generate_cloud/fast:
+	$(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/build
+.PHONY : generate_cloud/fast
+
+#=============================================================================
 # Target rules for targets named flow_utils
 
 # Build rule for target.
@@ -235,6 +248,7 @@ help:
 	@echo "... direct_estimate"
 	@echo "... optical_flow_gaussion"
 	@echo "... optical_flow"
+	@echo "... generate_cloud"
 	@echo "... flow_utils"
 .PHONY : help
 

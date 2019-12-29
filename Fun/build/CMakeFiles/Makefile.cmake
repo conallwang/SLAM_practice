@@ -54,10 +54,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "bin/CMakeFiles/direct_method.dir/DependInfo.cmake"
-  "bin/CMakeFiles/direct_estimate.dir/DependInfo.cmake"
-  "bin/CMakeFiles/optical_flow_gaussion.dir/DependInfo.cmake"
-  "bin/CMakeFiles/optical_flow.dir/DependInfo.cmake"
-  "bin/CMakeFiles/generate_cloud.dir/DependInfo.cmake"
-  "bin/CMakeFiles/flow_utils.dir/DependInfo.cmake"
+  "bin/CMakeFiles/build_map.dir/DependInfo.cmake"
   )

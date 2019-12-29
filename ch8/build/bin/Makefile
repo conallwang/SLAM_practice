@@ -79,6 +79,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -100,27 +121,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -213,6 +213,21 @@ optical_flow: bin/CMakeFiles/optical_flow.dir/rule
 optical_flow/fast:
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/optical_flow.dir/build.make bin/CMakeFiles/optical_flow.dir/build
 .PHONY : optical_flow/fast
+
+# Convenience name for target.
+bin/CMakeFiles/generate_cloud.dir/rule:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/generate_cloud.dir/rule
+.PHONY : bin/CMakeFiles/generate_cloud.dir/rule
+
+# Convenience name for target.
+generate_cloud: bin/CMakeFiles/generate_cloud.dir/rule
+
+.PHONY : generate_cloud
+
+# fast build rule for target.
+generate_cloud/fast:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/build
+.PHONY : generate_cloud/fast
 
 # Convenience name for target.
 bin/CMakeFiles/flow_utils.dir/rule:
@@ -313,6 +328,33 @@ flow_utils.cpp.s:
 	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/flow_utils.dir/build.make bin/CMakeFiles/flow_utils.dir/flow_utils.cpp.s
 .PHONY : flow_utils.cpp.s
 
+generate_cloud.o: generate_cloud.cpp.o
+
+.PHONY : generate_cloud.o
+
+# target to build an object file
+generate_cloud.cpp.o:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/generate_cloud.cpp.o
+.PHONY : generate_cloud.cpp.o
+
+generate_cloud.i: generate_cloud.cpp.i
+
+.PHONY : generate_cloud.i
+
+# target to preprocess a source file
+generate_cloud.cpp.i:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/generate_cloud.cpp.i
+.PHONY : generate_cloud.cpp.i
+
+generate_cloud.s: generate_cloud.cpp.s
+
+.PHONY : generate_cloud.s
+
+# target to generate assembly for a file
+generate_cloud.cpp.s:
+	cd /home/johnson/SLAM/ch8/build && $(MAKE) -f bin/CMakeFiles/generate_cloud.dir/build.make bin/CMakeFiles/generate_cloud.dir/generate_cloud.cpp.s
+.PHONY : generate_cloud.cpp.s
+
 optical_flow.o: optical_flow.cpp.o
 
 .PHONY : optical_flow.o
@@ -378,12 +420,13 @@ help:
 	@echo "... direct_estimate"
 	@echo "... optical_flow_gaussion"
 	@echo "... optical_flow"
+	@echo "... generate_cloud"
 	@echo "... flow_utils"
 	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... direct_estimate.o"
 	@echo "... direct_estimate.i"
 	@echo "... direct_estimate.s"
@@ -393,6 +436,9 @@ help:
 	@echo "... flow_utils.o"
 	@echo "... flow_utils.i"
 	@echo "... flow_utils.s"
+	@echo "... generate_cloud.o"
+	@echo "... generate_cloud.i"
+	@echo "... generate_cloud.s"
 	@echo "... optical_flow.o"
 	@echo "... optical_flow.i"
 	@echo "... optical_flow.s"
