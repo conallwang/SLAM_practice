@@ -61,7 +61,7 @@ class JacobianAccumulator {
         JJT = Matrix<double, 6, 6>::Zero();
         Je = Vector6d::Zero();
         error = 0.0;
-        projection_points.clear();
+        projection_points = vector<Vector2d>(points.size(), Vector2d(0, 0));
     }
 
     // Compute Jacobian
@@ -92,7 +92,7 @@ class JacobianAccumulator {
             Vector3d p3d_prone = T * p3d;
             Vector2d p2d_prone = ((K * p3d_prone) / p3d_prone[2]).head(2);
 
-            projection_points.push_back(p2d_prone);
+            projection_points[i] = p2d_prone;
             cnt_good++;
             for (int dy=-half_patch_size;dy<=half_patch_size;dy++) {
                 for (int dx=-half_patch_size;dx<=half_patch_size;dx++) {
@@ -137,12 +137,13 @@ class JacobianAccumulator {
     
 };
 
-void DirectSingle(cv::Mat image_1, cv::Mat image_2, vector<Vector3d> points, Sophus::SE3d& T, int iter_num = 100) {
+void DirectSingle(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> keypoints_1, vector<Vector3d> points, Sophus::SE3d& T, int iter_num = 100) {
     JacobianAccumulator jcaobian_accumulator(image_1, image_2, points, T);
     for (int i=0;i<iter_num;i++) {
         // JacobianAccumulator jcaobian_accumulator(image_1, image_2, points, T);
         jcaobian_accumulator.reset();
         cv::parallel_for_(cv::Range(0, points.size()), std::bind(&JacobianAccumulator::accumulate_jacobian, &jcaobian_accumulator, std::placeholders::_1));
+        // jcaobian_accumulator.accumulate_jacobian(cv::Range(0, points.size()));
 
         Matrix<double, 6, 6> JJT = jcaobian_accumulator.GetJJT();
         Vector6d Je = jcaobian_accumulator.GetJe();
@@ -169,6 +170,8 @@ void DirectSingle(cv::Mat image_1, cv::Mat image_2, vector<Vector3d> points, Sop
     cout << "\n[INFO] T = \n" << T.matrix() << endl;
 
     // Draw
+    cv::Mat img2_show;
+    cv::cvtColor(image_2, img2_show, cv::COLOR_GRAY2BGR);
     vector<mKeyPoint> keypoints_2;
     vector<Vector2d> projection_points = jcaobian_accumulator.GetProjection();
     for (Vector2d p: projection_points) {
@@ -177,10 +180,19 @@ void DirectSingle(cv::Mat image_1, cv::Mat image_2, vector<Vector3d> points, Sop
         keypoints_2.push_back(tmp);
     }
 
-    DrawKeypoints("image_2", image_2, keypoints_2);
+    int p_size = keypoints_1.size();
+    for (int i=0;i<p_size;i++) {
+        int p1_x = keypoints_1[i].GetPt().first;    int p1_y = keypoints_1[i].GetPt().second;
+        int p2_x = keypoints_2[i].GetPt().first;    int p2_y = keypoints_2[i].GetPt().second;
+
+        cv::circle(img2_show, cv::Point(p1_x, p1_y), 2, cv::Scalar(0, 255, 0), 2);
+        cv::line(img2_show, cv::Point(p1_x, p1_y), cv::Point(p2_x, p2_y), cv::Scalar(0, 255, 0));
+    }
+
+    cv::imshow("result", img2_show);
 }
 
-void DirectMulti(cv::Mat image_1, cv::Mat image_2, vector<Vector3d> points, Sophus::SE3d& T, int iter_num = 100) {
+void DirectMulti(cv::Mat image_1, cv::Mat image_2, vector<mKeyPoint> keypoints_1, vector<Vector3d> points, Sophus::SE3d& T, int iter_num = 100) {
     // pyramid param
     int pyramid_layers = 4;
     vector<cv::Mat> pyramids_img_1, pyramids_img_2;
@@ -213,7 +225,7 @@ void DirectMulti(cv::Mat image_1, cv::Mat image_2, vector<Vector3d> points, Soph
         cx = cxG * scale[i];
         cy = cyG * scale[i];
         K = KG * scale[i];
-        DirectSingle(pyramids_img_1[i], pyramids_img_2[i], points_tmp, T, iter_num);
+        DirectSingle(pyramids_img_1[i], pyramids_img_2[i], keypoints_1, points_tmp, T, iter_num);
     }
 }
 
@@ -273,8 +285,7 @@ int main(int argc, char* argv[]) {
 
     for (int i=1;i<6;i++) {
         cv::Mat next_img = cv::imread((fmt_others % i).str(), cv::IMREAD_GRAYSCALE);
-        DirectMulti(image_1, next_img, points, T, 1000);
-        DrawKeypoints("image_1", image_1, keypoints_1);
+        DirectMulti(image_1, next_img, keypoints_1, points, T, 1000);
         cv::waitKey(0);
     }
 
