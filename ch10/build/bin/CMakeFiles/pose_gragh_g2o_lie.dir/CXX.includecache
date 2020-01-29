@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/johnson/SLAM/ch10/src/pose_gragh_g2o_lie.cpp
+iostream
+-
+fstream
+-
+string
+-
+eigen3/Eigen/Core
+-
+sophus/se3.hpp
+-
+sophus/so3.hpp
+-
+g2o/core/optimization_algorithm_levenberg.h
+-
+g2o/core/block_solver.h
+-
+g2o/solvers/eigen/linear_solver_eigen.h
+-
+g2o/core/base_vertex.h
+-
+g2o/core/base_binary_edge.h
+-
+
